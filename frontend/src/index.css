@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { background-color: #020408; color: #e2e8f0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0a0f1e; }
+  ::-webkit-scrollbar-thumb { background: #1e2d52; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+}
+
+@layer components {
+  .card { @apply bg-[#0d1428] border border-[#162040] rounded-xl p-5; }
+  .btn-primary { @apply bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50; }
+  .btn-secondary { @apply bg-[#162040] hover:bg-[#1e2d52] text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer border border-[#1e2d52]; }
+  .table-row { @apply border-b border-[#162040] hover:bg-[#111b35]/50 transition-colors; }
+  .table-th { @apply text-xs text-slate-400 uppercase tracking-wider px-4 py-3 text-left font-medium; }
+  .table-td { @apply px-4 py-3 text-sm text-slate-300; }
+  .input-field { @apply bg-[#111b35] border border-[#1e2d52] rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full; }
+}

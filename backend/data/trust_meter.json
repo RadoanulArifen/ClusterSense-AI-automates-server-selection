@@ -1,0 +1,202 @@
+[
+  {
+    "id": "tm-s-001",
+    "timestamp": "2026-07-01T09:15:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-03",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-s-002",
+    "timestamp": "2026-07-02T10:30:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-08",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-s-003",
+    "timestamp": "2026-07-03T11:45:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-12",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Node required additional monitoring after deployment",
+    "status": "MIXED"
+  },
+  {
+    "id": "tm-s-004",
+    "timestamp": "2026-07-05T08:20:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-02",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-s-005",
+    "timestamp": "2026-07-06T13:10:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-15",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-s-006",
+    "timestamp": "2026-07-08T15:40:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-06",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment was redirected after a resource spike",
+    "status": "POOR"
+  },
+  {
+    "id": "tm-s-007",
+    "timestamp": "2026-07-10T09:50:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-10",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-s-008",
+    "timestamp": "2026-07-12T14:05:00Z",
+    "module": "scheduling",
+    "recommendation": "Deploy workload",
+    "recommended_node": "Node-18",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Deployment completed without capacity alerts",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-001",
+    "timestamp": "2026-07-01T10:00:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Monthly power usage decreased as projected",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-002",
+    "timestamp": "2026-07-02T12:15:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Node remained within its normal utilization range",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-003",
+    "timestamp": "2026-07-04T09:35:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-09",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Savings were lower than the projected amount",
+    "status": "MIXED"
+  },
+  {
+    "id": "tm-c-004",
+    "timestamp": "2026-07-06T16:25:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Shutdown",
+    "recommended_node": "Node-14",
+    "predicted_action": "Shutdown",
+    "actual_outcome": "Node was needed again before the planned idle window",
+    "status": "POOR"
+  },
+  {
+    "id": "tm-c-005",
+    "timestamp": "2026-07-08T11:10:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Node remained within its normal utilization range",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-006",
+    "timestamp": "2026-07-11T13:45:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-04",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Monthly power usage decreased as projected",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-007",
+    "timestamp": "2026-07-13T08:55:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Node remained within its normal utilization range",
+    "status": "GOOD"
+  },
+  {
+    "id": "tm-c-008",
+    "timestamp": "2026-07-15T17:20:00Z",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-11",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Savings were lower than the projected amount",
+    "status": "MIXED"
+  },
+  {
+    "id": "6b3facd5-b88b-4574-bb52-b60b9c675b9f",
+    "timestamp": "2026-07-25T05:07:34.773683+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-08",
+    "recommended_node": "Node-08",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7c64c5a5-df4c-4d91-a62c-0758ea5a25e2",
+    "timestamp": "2026-07-25T05:07:34.777795+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-08",
+    "recommended_node": "Node-08",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ccf83b4a-8528-45bf-9bcd-0c4f0e799133",
+    "timestamp": "2026-07-25T05:07:37.578799+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-13",
+    "recommended_node": "Node-13",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "161fe91a-7c25-42be-bfd0-c57b5b8df7a4",
+    "timestamp": "2026-07-25T05:07:37.586458+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-13",
+    "recommended_node": "Node-13",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  }
+]

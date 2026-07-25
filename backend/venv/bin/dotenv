@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/run/media/arifen/129787e4-6158-4474-8087-3c9f44a14fe3/Final Hackathon/clustersense-ai/clustersense-ai/backend/venv/bin/python" "$0" "$@"
+' '''
+import sys
+from dotenv.__main__ import cli
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(cli())

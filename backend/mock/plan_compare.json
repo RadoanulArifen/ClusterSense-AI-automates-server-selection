@@ -1,0 +1,95 @@
+[
+  {
+    "id": "plan-001",
+    "timestamp": "2026-07-18T09:30:00Z",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4,
+      "avg_ram_per_deployment": 8
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-07",
+      "estimated_cost": 210.0,
+      "expected_cpu_load": 71.0,
+      "expected_ram_usage": 69.0,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 91.0,
+      "expected_outcome": "Balanced Resource Usage"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-12",
+      "estimated_cost": 180.0,
+      "expected_cpu_load": 64.0,
+      "expected_ram_usage": 61.0,
+      "predicted_risk": "LOW",
+      "trust_score": 95.0,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower risk, lower estimated cost, and higher trust score."
+  },
+  {
+    "id": "plan-002",
+    "timestamp": "2026-07-21T14:20:00Z",
+    "request": {
+      "future_deployments": 25,
+      "avg_cpu_per_deployment": 6,
+      "avg_ram_per_deployment": 12
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-03",
+      "estimated_cost": 286.0,
+      "expected_cpu_load": 73.0,
+      "expected_ram_usage": 67.0,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 89.0,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-16",
+      "estimated_cost": 244.0,
+      "expected_cpu_load": 66.0,
+      "expected_ram_usage": 63.0,
+      "predicted_risk": "LOW",
+      "trust_score": 94.0,
+      "expected_outcome": "Balanced Resource Usage"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower risk, lower estimated cost, and higher trust score."
+  },
+  {
+    "id": "62d038c3-4811-445b-abe9-8da334679b84",
+    "timestamp": "2026-07-25T05:35:54.414469+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
+  }
+]
