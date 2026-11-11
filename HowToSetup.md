@@ -1,5 +1,8 @@
 # ClusterSense AI setup
 
+For Vercel frontend + Render backend/PostgreSQL, follow
+[the Vercel/Render deployment guide](docs/VERCEL-RENDER.md).
+
 Run commands from the extracted project root unless another directory is shown.
 Two targets are supported: Docker Compose and an Ubuntu VPS/native installation.
 Use Python 3.11, Node.js 22, PostgreSQL 15, or Docker Engine with Compose v2.

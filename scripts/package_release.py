@@ -8,14 +8,14 @@ OUTPUT = ROOT / "clustersense-ai-source.zip"
 ROOT_FILES = {
     "README.md", "HowToSetup.md", "AGENTS.md", "CHANGELOG.md", "LICENSE-NOTE.md",
     ".env.example", ".gitignore", ".dockerignore", "docker-compose.yml",
-    "setup.sh", "start.sh", "stop.sh", "reset_db.sh", "train_models.py",
+    "setup.sh", "start.sh", "stop.sh", "reset_db.sh", "train_models.py", "render.yaml",
 }
 TREES = {"backend/app", "backend/data", "backend/mock", "frontend/src", "frontend/public",
          "database", "docs", "deploy", "scripts", "tests"}
 EXTRA = {"backend/requirements.txt", "backend/.env.example", "backend/Dockerfile",
          "frontend/.env.example", "frontend/Dockerfile", "frontend/package.json",
          "frontend/package-lock.json", "frontend/index.html", "frontend/vite.config.js",
-         "frontend/tailwind.config.js", "frontend/postcss.config.js"}
+         "frontend/tailwind.config.js", "frontend/postcss.config.js", "frontend/vercel.json"}
 BLOCKED = {"venv", ".venv", "node_modules", "__pycache__", ".git", "dist", "build"}
 
 def release_files():

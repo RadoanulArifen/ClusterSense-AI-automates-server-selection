@@ -1,0 +1,27 @@
+# Demo tiers: review Render's free-tier expiry and resource limits before use.
+services:
+  - type: web
+    name: clustersense-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: clustersense-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+databases:
+  - name: clustersense-db
+    plan: free
+    databaseName: clustersense_db
+    user: clustersense

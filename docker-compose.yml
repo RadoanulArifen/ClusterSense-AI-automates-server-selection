@@ -1,5 +1,6 @@
 services:
   db:
+    restart: unless-stopped
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-clustersense}
@@ -13,6 +14,7 @@ services:
       timeout: 5s
       retries: 20
   backend:
+    restart: unless-stopped
     build:
       context: .
       dockerfile: backend/Dockerfile
@@ -23,6 +25,8 @@ services:
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+    volumes:
+      - demo_records:/srv/backend/mock
     depends_on:
       db:
         condition: service_healthy
@@ -33,6 +37,7 @@ services:
       retries: 30
       start_period: 30s
   web:
+    restart: unless-stopped
     build:
       context: .
       dockerfile: frontend/Dockerfile
@@ -43,3 +48,4 @@ services:
         condition: service_healthy
 volumes:
   postgres_data:
+  demo_records:
