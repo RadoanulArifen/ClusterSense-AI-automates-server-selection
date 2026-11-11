@@ -91,5 +91,129 @@
     },
     "winning_plan": "Plan B",
     "recommendation_reason": "Lower estimated cost, higher trust score."
+  },
+  {
+    "id": "b7ba3a66-17e6-49cd-af47-ce777c161231",
+    "timestamp": "2026-07-25T06:50:08.623960+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
+  },
+  {
+    "id": "9632ddfd-553f-46bd-8fb9-2b7becb05490",
+    "timestamp": "2026-07-25T07:26:11.103078+00:00",
+    "request": {
+      "future_deployments": 3,
+      "avg_cpu_per_deployment": 2.0,
+      "avg_ram_per_deployment": 4.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 20,
+      "expected_cpu_load": 62.6,
+      "expected_ram_usage": 30.6,
+      "predicted_risk": "LOW",
+      "trust_score": 93.3,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 20,
+      "expected_cpu_load": 75.6,
+      "expected_ram_usage": 23.0,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 85.1,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan A",
+    "recommendation_reason": "Lower risk, higher trust score."
+  },
+  {
+    "id": "af076d0b-2de4-48c0-971c-8c872aa04d23",
+    "timestamp": "2026-07-25T07:41:15.032041+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
+  },
+  {
+    "id": "52ec64de-ec21-435b-a27b-a28167ffc035",
+    "timestamp": "2026-07-26T14:53:40.270113+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
   }
 ]

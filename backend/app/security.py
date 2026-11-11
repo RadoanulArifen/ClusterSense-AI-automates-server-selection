@@ -8,7 +8,10 @@ from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
-SECRET_KEY = os.getenv("SECRET_KEY", "clustersense-ai-super-secret-key-2024")
+SECRET_KEY = os.environ["SECRET_KEY"]
+if len(SECRET_KEY) < 32 or SECRET_KEY.startswith("CHANGE_ME"):
+    raise RuntimeError("SECRET_KEY must be a generated secret of at least 32 characters")
+
 ALGORITHM  = "HS256"
 TOKEN_MINS = 1440
 

@@ -8,7 +8,7 @@ from app.database import get_db
 from app.models.models import Node, Alert, DeploymentRequest
 
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env'))
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AQ.Ab8RN6Ik9QXmeeiI46EDHpJrbpSVuT5XXGKtzOh94umUMeKWnQ")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 router = APIRouter()
 

@@ -6,9 +6,6 @@ echo -e "\n${BOLD}${CYAN}  ClusterSense AI — Starting Services${NC}\n"
 
 [ -d "$SCRIPT_DIR/backend/venv" ] || { echo -e "${RED}[ERROR]${NC} Run 'bash setup.sh' first."; exit 1; }
 
-fuser -k 8000/tcp 2>/dev/null || true
-fuser -k 5173/tcp 2>/dev/null || true
-sleep 1
 
 echo -e "${GREEN}[1/2]${NC} Starting Backend  (http://localhost:8000)..."
 cd "$SCRIPT_DIR/backend"
@@ -34,7 +31,7 @@ done
 echo -e "\n${BOLD}${GREEN}✅ ClusterSense AI is running!${NC}\n"
 echo -e "  ${CYAN}${BOLD}http://localhost:5173${NC}  ← Open in browser"
 echo -e "  ${CYAN}http://localhost:8000/docs${NC}  ← API Docs\n"
-echo -e "  Login: admin@hostnova.com / password123\n"
+echo -e "  Login: use ADMIN_EMAIL and ADMIN_PASSWORD from backend/.env\n"
 echo -e "  Press Ctrl+C or run 'bash stop.sh' to stop.\n"
 
 trap "bash $SCRIPT_DIR/stop.sh; exit 0" INT TERM

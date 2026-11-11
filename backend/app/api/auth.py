@@ -20,7 +20,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     if not payload:
         raise HTTPException(status_code=401, detail="Invalid token")
     user = db.query(User).filter(User.email == payload.get("sub")).first()
-    if not user:
+    if not user or not user.is_active:
         raise HTTPException(status_code=401, detail="User not found")
     return user
 
@@ -28,7 +28,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 @router.post("/login")
 def login(req: LoginRequest, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == req.email).first()
-    if not user or not verify_password(req.password, user.hashed_password):
+    if not user or not user.is_active or not verify_password(req.password, user.hashed_password):
         raise HTTPException(status_code=401, detail="Invalid credentials")
     token = create_access_token({"sub": user.email})
     return {
@@ -41,3 +41,10 @@ def login(req: LoginRequest, db: Session = Depends(get_db)):
 def me(current_user: User = Depends(get_current_user)):
     return {"id": current_user.id, "email": current_user.email,
             "full_name": current_user.full_name, "role": current_user.role}
+
+
+async def require_admin(current_user: User = Depends(get_current_user)):
+    """All infrastructure records belong to the administrator workspace."""
+    if current_user.role != "admin":
+        raise HTTPException(status_code=403, detail="Administrator role required")
+    return current_user

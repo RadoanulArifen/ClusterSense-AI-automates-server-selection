@@ -4,8 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import { Zap, Lock, Mail, Eye, EyeOff, AlertCircle } from 'lucide-react';
 
 export default function Login() {
-  const [email, setEmail]   = useState('admin@hostnova.com');
-  const [pw, setPw]         = useState('password123');
+  const [email, setEmail]   = useState('');
+  const [pw, setPw]         = useState('');
   const [show, setShow]     = useState(false);
   const [error, setError]   = useState('');
   const { login, loading }  = useAuth();
@@ -64,13 +64,7 @@ export default function Login() {
               {loading ? <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>Authenticating...</> : <><Lock size={16}/> Sign In</>}
             </button>
           </form>
-          <div className="mt-6 pt-5 border-t border-[#162040]">
-            <p className="text-xs text-slate-500 text-center mb-2">Demo credentials</p>
-            <div className="bg-[#111b35] rounded-lg px-4 py-3 font-mono text-xs text-slate-300 space-y-1">
-              <div><span className="text-slate-500">Email:</span> admin@hostnova.com</div>
-              <div><span className="text-slate-500">Pass:</span>  password123</div>
-            </div>
-          </div>
+          <p className="text-xs text-slate-500 mt-4">Use the administrator credentials provided during setup.</p>
         </div>
         <p className="text-center text-slate-600 text-xs mt-4">
           <button onClick={()=>navigate('/order')} className="text-blue-400 hover:text-blue-300">Try the Demo Portal</button>

@@ -1,5 +1,5 @@
 """Seed demo data — node metrics match real dataset columns"""
-import random, uuid
+import os, random, uuid
 from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
@@ -30,20 +30,18 @@ NODE_TYPES = ["compute","storage","gpu","general","memory-optimized"]
 async def seed_demo_data():
     db = SessionLocal()
     try:
-        if db.query(User).count() > 0:
-            print("DB already seeded — skipping.")
+        # Provision the administrator separately so SQL-imported demo data is supported.
+        if not db.query(User).count():
+            password = os.environ["ADMIN_PASSWORD"]
+            if password.startswith("CHANGE_ME") or len(password) < 12:
+                raise ValueError("ADMIN_PASSWORD must be a unique password of at least 12 characters")
+            db.add(User(email=os.environ["ADMIN_EMAIL"],
+                        hashed_password=get_password_hash(password),
+                        full_name="Infrastructure Admin", role="admin"))
+            db.commit()
+        if db.query(Node).count():
             return
-
         print("Seeding demo data …")
-
-        # Admin user
-        admin = User(
-            email="admin@hostnova.com",
-            hashed_password=get_password_hash("password123"),
-            full_name="Infrastructure Admin", role="admin"
-        )
-        db.add(admin)
-        db.flush()
 
         # 20 nodes with column names matching real datasets
         nodes = []
@@ -174,6 +172,6 @@ async def seed_demo_data():
 
     except Exception as e:
         db.rollback()
-        print(f"⚠️ Seed skipped (may already exist): {e}")
+        raise RuntimeError("Database seed failed") from e
     finally:
         db.close()

@@ -27,7 +27,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/order" element={<OrderPortal />} />
+      <Route path="/order" element={<Protected><OrderPortal /></Protected>} />
       <Route path="/app" element={<Protected><Layout /></Protected>}>
         <Route index element={<Navigate to="/app/dashboard" replace />} />
         <Route path="dashboard"  element={<Dashboard />} />

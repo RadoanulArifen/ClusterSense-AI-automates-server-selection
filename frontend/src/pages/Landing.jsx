@@ -165,7 +165,7 @@ export default function Landing() {
               <Lock size={18}/> Admin Login
             </button>
           </div>
-          <p className="text-slate-600 text-xs mt-5">admin@hostnova.com / password123</p>
+          <p className="text-slate-600 text-xs mt-5">Sign in with the administrator account configured during setup</p>
         </div>
       </section>
 
