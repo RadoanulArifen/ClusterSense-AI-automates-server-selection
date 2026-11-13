@@ -2158,5 +2158,2225 @@
     "predicted_action": "Keep Running",
     "actual_outcome": "Recommendation achieved the expected operational result",
     "status": "GOOD"
+  },
+  {
+    "id": "6cf471b8-cdab-4536-b273-066b24d1c1dc",
+    "timestamp": "2026-11-13T14:52:00.254088+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-13",
+    "recommended_node": "Node-13",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0f5f14c6-a1b6-415f-a244-596dfb176e33",
+    "timestamp": "2026-11-13T14:52:00.284390+00:00",
+    "module": "scheduling",
+    "recommendation": "Deploy to Node-13",
+    "recommended_node": "Node-13",
+    "predicted_action": "Deploy",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "2cf22191-25dd-4a6c-809f-e5573d381530",
+    "timestamp": "2026-11-13T14:52:04.568762+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "871a6f85-0021-486f-af8c-33a990e68fd0",
+    "timestamp": "2026-11-13T14:52:04.570509+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7dda9541-c83b-419f-935f-bc5618f05b1e",
+    "timestamp": "2026-11-13T14:52:04.571732+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "34053743-7741-4e9d-843f-c4ece4594ce1",
+    "timestamp": "2026-11-13T14:52:04.572916+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b29bf8a2-09c5-4cd6-8b51-d69a902196cd",
+    "timestamp": "2026-11-13T14:52:04.574312+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "cb7422e4-8da0-428d-95c5-cc6c6f3f4f85",
+    "timestamp": "2026-11-13T14:52:04.575485+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2a34887f-f634-402b-b2fd-74a84abca050",
+    "timestamp": "2026-11-13T14:52:04.576659+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2b886c17-9a42-4415-b655-456e4d5486f5",
+    "timestamp": "2026-11-13T14:52:04.577926+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "ea453380-4208-4e15-9568-615868e6d5a7",
+    "timestamp": "2026-11-13T14:52:04.579115+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "97a72750-e690-41bf-b028-38d574e925b7",
+    "timestamp": "2026-11-13T14:52:04.580765+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "178d9cfc-1219-48d7-9bff-9d2f51d62314",
+    "timestamp": "2026-11-13T14:52:04.581965+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8bc7d922-fd9b-44fc-870e-05870e8b0dca",
+    "timestamp": "2026-11-13T14:52:04.583114+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "21080fcd-8f49-4700-a8cc-465e46d04308",
+    "timestamp": "2026-11-13T14:52:04.584611+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b51b0f06-baf3-4c31-acd2-67ad022d0ee6",
+    "timestamp": "2026-11-13T14:52:04.585794+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e042a94e-e391-4077-95d8-60385f5b4510",
+    "timestamp": "2026-11-13T14:52:04.587201+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "05447f72-5ea1-4322-bb2f-3d870141a9ac",
+    "timestamp": "2026-11-13T14:52:04.588443+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "14831e0a-1e88-4223-b9a6-14f4da94cf10",
+    "timestamp": "2026-11-13T14:52:04.589614+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "26570e68-adf3-4ce1-bce0-519b6b0d4d36",
+    "timestamp": "2026-11-13T14:52:04.590786+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "f438156b-7fbe-4a58-b3c7-c9efba0c7ee7",
+    "timestamp": "2026-11-13T14:52:04.592046+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "46f22397-0ba0-428b-b5dd-fbf554187923",
+    "timestamp": "2026-11-13T14:52:04.593319+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "159f56f0-9c1d-42ee-b6e4-9fdcfa8643a3",
+    "timestamp": "2026-11-13T14:52:41.418032+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "a324dc73-4a01-4fa0-9d0e-be52a1a34364",
+    "timestamp": "2026-11-13T14:52:41.420322+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2632235b-7ea7-49ac-b140-e86d88b0d782",
+    "timestamp": "2026-11-13T14:52:41.421760+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b27143bc-957b-4e4c-97da-915665cffcd6",
+    "timestamp": "2026-11-13T14:52:41.423071+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ffa2144c-3fb2-4ec5-91c5-2255d0904d86",
+    "timestamp": "2026-11-13T14:52:41.424380+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "86e062e6-4351-4981-b7d0-4a7222a89683",
+    "timestamp": "2026-11-13T14:52:41.425785+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0d536a0b-6245-494d-b171-2b7d3fa8de26",
+    "timestamp": "2026-11-13T14:52:41.427751+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "bc88966f-792e-4743-b6aa-13813123eb40",
+    "timestamp": "2026-11-13T14:52:41.429703+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "fd138247-c0da-454e-8f00-9f7f2a8ae4f2",
+    "timestamp": "2026-11-13T14:52:41.431049+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "886f6c61-84bf-426a-a79e-22e4de4f3641",
+    "timestamp": "2026-11-13T14:52:41.432295+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "16fdd181-042c-4ec0-a1fc-0f9c8590515b",
+    "timestamp": "2026-11-13T14:52:41.433568+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4c23b5d6-8fb4-4f0d-b940-60cf510bc5aa",
+    "timestamp": "2026-11-13T14:52:41.434874+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "98745a33-332d-46f4-849b-2f158e21bbd4",
+    "timestamp": "2026-11-13T14:52:41.436347+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1a1e6c7a-9771-480e-9ef2-152fb44910ac",
+    "timestamp": "2026-11-13T14:52:41.437769+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b417a318-e00f-4176-93cb-6699ab44dc3e",
+    "timestamp": "2026-11-13T14:52:41.439154+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "93d97b58-7a70-48ae-87dd-2f9e248a1455",
+    "timestamp": "2026-11-13T14:52:41.440586+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "119be2ba-281a-44b0-8c7e-5df226400dc3",
+    "timestamp": "2026-11-13T14:52:41.442569+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "c98b662b-1bf7-44cd-96ba-f2bdd631c690",
+    "timestamp": "2026-11-13T14:52:41.444202+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "48c1f3cb-60e7-4000-93ae-23eb1c9f8233",
+    "timestamp": "2026-11-13T14:52:41.445663+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b796dde2-e971-4022-8265-bb7bfc2e7c0e",
+    "timestamp": "2026-11-13T14:52:41.447105+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "772b8d7f-e76d-43ad-afde-e128d1190650",
+    "timestamp": "2026-11-13T14:52:43.924895+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5116ffdb-d7b0-4bb5-8c3e-8a7b720e4081",
+    "timestamp": "2026-11-13T14:52:43.926532+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0843e588-1742-491d-9065-02bbb299acd2",
+    "timestamp": "2026-11-13T14:52:43.927921+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "78e22f35-65a0-4d9e-92d7-35ac9c30f477",
+    "timestamp": "2026-11-13T14:52:43.929665+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "9fedfb20-be66-48e0-a28d-f57ce3910f94",
+    "timestamp": "2026-11-13T14:52:43.931251+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1fdeeb4e-1884-4591-a597-0c99d8494541",
+    "timestamp": "2026-11-13T14:52:43.932595+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7cec68fa-18bc-4e82-b470-a56eb9bb322f",
+    "timestamp": "2026-11-13T14:52:43.933955+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "be105dca-b07e-49f1-807c-b88ace530fc5",
+    "timestamp": "2026-11-13T14:52:43.935348+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "423876b6-c5fb-4f87-8050-dc2b1b706c81",
+    "timestamp": "2026-11-13T14:52:43.936853+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "a80a12af-88a2-40e2-a009-9ce4a74ee57c",
+    "timestamp": "2026-11-13T14:52:43.938215+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1de4eafd-04f3-4581-80fc-315155cf449c",
+    "timestamp": "2026-11-13T14:52:43.939565+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "dd8029de-1a1a-4acf-9992-94bf285970e6",
+    "timestamp": "2026-11-13T14:52:43.940920+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "be30a507-5eeb-49d5-9830-7ff07c5e9008",
+    "timestamp": "2026-11-13T14:52:43.942353+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5bd4ee17-6ca1-4db7-b1d5-486948c0e239",
+    "timestamp": "2026-11-13T14:52:43.943837+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "525cf408-6f7f-4deb-8295-6526cbd3e6b2",
+    "timestamp": "2026-11-13T14:52:43.945196+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "de468ef8-8315-4006-9963-742babbd6726",
+    "timestamp": "2026-11-13T14:52:43.946556+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "367dd85b-f1b6-4c1d-a282-98b97414bb7a",
+    "timestamp": "2026-11-13T14:52:43.947957+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "af2a5968-7f51-45ab-b386-22068e31cb0f",
+    "timestamp": "2026-11-13T14:52:43.949406+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "106ead0d-17ef-4746-814c-5ed132aac0d0",
+    "timestamp": "2026-11-13T14:52:43.950868+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8943f553-fb94-42a7-a613-dd4f221c77d2",
+    "timestamp": "2026-11-13T14:52:43.952209+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "d1d50172-80e5-4fc8-bbda-14eef6aac15f",
+    "timestamp": "2026-11-13T14:54:21.094936+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5c8d599b-a6f0-4c7c-abfa-b6be7568b67f",
+    "timestamp": "2026-11-13T14:54:21.104136+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ec73e3b7-416d-4b47-a2e0-bd72f466e248",
+    "timestamp": "2026-11-13T14:54:21.106129+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "a0e8b28d-1e63-41ae-864a-9a4755cb1d29",
+    "timestamp": "2026-11-13T14:54:21.107569+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "98e68e82-162c-4629-9238-327c28ff6bdd",
+    "timestamp": "2026-11-13T14:54:21.108984+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "6d29bff7-df5f-4d50-bb1d-40bb6e47d0d3",
+    "timestamp": "2026-11-13T14:54:21.110517+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "5a6ffa52-b157-48ff-9216-16b3c1c405b7",
+    "timestamp": "2026-11-13T14:54:21.111951+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8ea0bbb1-7f08-436a-ac55-7ce1ee80b8fa",
+    "timestamp": "2026-11-13T14:54:21.113338+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "cb6cbaf3-ac6f-49be-82c1-0bd6a380951c",
+    "timestamp": "2026-11-13T14:54:21.114746+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e3a48979-6cc3-4262-8120-523b796f8b88",
+    "timestamp": "2026-11-13T14:54:21.116022+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3990e851-7e56-43c0-b0df-febff5336cbf",
+    "timestamp": "2026-11-13T14:54:21.117290+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "217c42e3-e136-422f-8494-2b0ae5afb8e2",
+    "timestamp": "2026-11-13T14:54:21.118660+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9f48afeb-4cc7-447e-a109-33e871a59d30",
+    "timestamp": "2026-11-13T14:54:21.120057+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "d574433d-5078-4f3e-b049-a2b793490a67",
+    "timestamp": "2026-11-13T14:54:21.121467+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "07065cb2-d486-4c01-b72c-cce9a8e792c9",
+    "timestamp": "2026-11-13T14:54:21.122882+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5dcec8e1-298c-41c4-b1ca-0ecee2e734d2",
+    "timestamp": "2026-11-13T14:54:21.124180+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "eff4e871-80d7-4537-bf71-d1ac5ed895f5",
+    "timestamp": "2026-11-13T14:54:21.125550+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "672500f8-c107-4790-9e1f-19bbc1e5e1f7",
+    "timestamp": "2026-11-13T14:54:21.126874+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ea3d5925-dba9-4864-9825-3374a54710c4",
+    "timestamp": "2026-11-13T14:54:21.128315+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4bb8fc5c-0226-4ec6-90f5-4789d0abeb8d",
+    "timestamp": "2026-11-13T14:54:21.129747+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "99a27158-96c8-4315-a532-a1f335e09ec2",
+    "timestamp": "2026-11-13T14:54:26.633333+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "96c74f05-5d55-412c-b1e5-7848073fc8e2",
+    "timestamp": "2026-11-13T14:54:26.635494+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0d6fd0a8-490a-4e9e-9f01-ec38a2ad9c1f",
+    "timestamp": "2026-11-13T14:54:26.637424+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "bb75690d-28cb-40e5-8e4a-89330f5e809c",
+    "timestamp": "2026-11-13T14:54:26.639159+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "055360ad-41f7-4c90-8c86-be0d0a38852f",
+    "timestamp": "2026-11-13T14:54:26.640743+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "e23aa0d3-3586-4396-804e-418d6bbcb051",
+    "timestamp": "2026-11-13T14:54:26.642176+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "ffee8966-9ed8-4507-880d-5cbd75915e0d",
+    "timestamp": "2026-11-13T14:54:26.643536+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2564c940-7252-473d-9208-e43a0c4a7c88",
+    "timestamp": "2026-11-13T14:54:26.644982+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7f310c72-b717-48b4-bc65-ab155c7c2bb2",
+    "timestamp": "2026-11-13T14:54:26.646349+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e0a1f5bc-e2e4-4d17-abaa-380ee5cb3e92",
+    "timestamp": "2026-11-13T14:54:26.647856+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "aace1ebc-3dad-41a5-a391-d796cfbc2c2e",
+    "timestamp": "2026-11-13T14:54:26.649230+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "a55d666f-7070-4a97-8205-92a8515a9df6",
+    "timestamp": "2026-11-13T14:54:26.650592+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "58b344f3-c33f-40c5-b6ea-6e69f284add2",
+    "timestamp": "2026-11-13T14:54:26.652064+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "8bbff581-ed32-4b73-be83-40b8863f6ba5",
+    "timestamp": "2026-11-13T14:54:26.653550+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "52e77cc1-8ee2-4596-8b95-a1c7540a3821",
+    "timestamp": "2026-11-13T14:54:26.655208+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b691636b-ae34-4149-8dac-c9f2d326c954",
+    "timestamp": "2026-11-13T14:54:26.656684+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0d557d62-29c7-4a37-bd66-9d0176d39535",
+    "timestamp": "2026-11-13T14:54:26.658231+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "ca360a25-294e-4d4a-af68-d9c43f83f745",
+    "timestamp": "2026-11-13T14:54:26.659664+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "d8037514-b081-4ad9-9894-141661def7fb",
+    "timestamp": "2026-11-13T14:54:26.661291+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8ee82203-6aa1-4dfa-8d47-9817a3336ff8",
+    "timestamp": "2026-11-13T14:54:26.662841+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1af4b709-e3d1-4ec8-9f7d-1f62fa7f2641",
+    "timestamp": "2026-11-13T14:54:32.137748+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3afc552a-6d0f-4dd1-afb7-653c98113233",
+    "timestamp": "2026-11-13T14:54:32.139699+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "cd5493e5-7669-4061-a70a-7b1412992809",
+    "timestamp": "2026-11-13T14:54:32.141649+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "17fcbf06-5d43-4343-ab3b-eab526735121",
+    "timestamp": "2026-11-13T14:54:32.143563+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "2a5b6d76-08a2-487f-837a-fc54ee93486f",
+    "timestamp": "2026-11-13T14:54:32.145499+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "912f2817-c571-4597-832a-17b10ddcb9f9",
+    "timestamp": "2026-11-13T14:54:32.147301+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "31c1cf6f-cf58-46e4-9584-2df9b37e9450",
+    "timestamp": "2026-11-13T14:54:32.148900+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "da5842fa-8b79-4ec0-8021-1987d11feed8",
+    "timestamp": "2026-11-13T14:54:32.150489+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "bf72d3ce-662a-4c00-8f5e-ca6d22c2e5da",
+    "timestamp": "2026-11-13T14:54:32.151970+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4f2c7f10-9ca8-4396-a9c7-c93b825c14fd",
+    "timestamp": "2026-11-13T14:54:32.153540+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "54193014-048b-4427-89a4-c5d545b7e4cd",
+    "timestamp": "2026-11-13T14:54:32.155742+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "12b37760-1744-4227-9d98-f8037ce83777",
+    "timestamp": "2026-11-13T14:54:32.157419+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "90f6a821-33b4-48ae-97d0-f2e3b94173a0",
+    "timestamp": "2026-11-13T14:54:32.159075+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "7bf1a4b3-3396-45f6-aa88-bbd106e1e517",
+    "timestamp": "2026-11-13T14:54:32.160677+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "20d379ed-591a-4b5d-8ceb-237d6f01c791",
+    "timestamp": "2026-11-13T14:54:32.162731+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4805c830-533a-42a7-b7ae-5fe9de8ee541",
+    "timestamp": "2026-11-13T14:54:32.164453+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "15f9d4ed-3533-408e-80a7-a5c8a76e0a7f",
+    "timestamp": "2026-11-13T14:54:32.166101+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1994ed1f-041f-4f4f-aeee-b97e569ad5c2",
+    "timestamp": "2026-11-13T14:54:32.167652+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e7fd68aa-eb14-45ec-b6bf-437f76668212",
+    "timestamp": "2026-11-13T14:54:32.169287+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "e4532540-adc4-4329-949f-e77e7515ebec",
+    "timestamp": "2026-11-13T14:54:32.170941+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9808870b-db38-4cee-bddd-514dff487fa3",
+    "timestamp": "2026-11-13T14:54:37.649577+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "5f2b8786-00d0-44b9-abe1-a22ceb64137a",
+    "timestamp": "2026-11-13T14:54:37.651729+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "38aca86b-3e1c-4e33-92a2-cd2c09937d5c",
+    "timestamp": "2026-11-13T14:54:37.653497+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9e2d3426-43e2-4443-ad66-f38f9df750bb",
+    "timestamp": "2026-11-13T14:54:37.655172+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "6ab3b5d0-c38b-47cb-bb68-2d594b75759f",
+    "timestamp": "2026-11-13T14:54:37.656897+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "f7d30465-27f7-4efb-b455-b49342f5b935",
+    "timestamp": "2026-11-13T14:54:37.658721+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "49cd17b0-36e4-4cf0-b9a8-81de624cb380",
+    "timestamp": "2026-11-13T14:54:37.660570+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "afe14add-2096-4a14-af5a-c4e955712de2",
+    "timestamp": "2026-11-13T14:54:37.662318+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b11e9531-1457-4e50-a505-958276fe56d1",
+    "timestamp": "2026-11-13T14:54:37.663993+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "55348b2f-eae0-4fdc-9896-38135de62a56",
+    "timestamp": "2026-11-13T14:54:37.665648+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "14dce922-5a0d-46d0-8c6c-4c21c7a62b0c",
+    "timestamp": "2026-11-13T14:54:37.667301+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ac70cba2-036b-4285-b901-e908a01762c8",
+    "timestamp": "2026-11-13T14:54:37.668974+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "32678aca-6c3d-4fff-bc52-238356e39ddf",
+    "timestamp": "2026-11-13T14:54:37.670684+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "113169d0-0bf5-43a7-88cc-dbe25f8d265e",
+    "timestamp": "2026-11-13T14:54:37.672351+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b590dbb6-5295-4271-9c7f-b1a75f609aa1",
+    "timestamp": "2026-11-13T14:54:37.674073+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "c24f30d8-9fce-4dd8-b21b-3996d32168a9",
+    "timestamp": "2026-11-13T14:54:37.675800+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "fcf25f89-4955-488b-81eb-93eb4d012cdb",
+    "timestamp": "2026-11-13T14:54:37.677516+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3c73af61-31bc-4e15-9acf-c1bfdd75da86",
+    "timestamp": "2026-11-13T14:54:37.679697+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1c15aa60-5a39-40c8-be63-41788e4c8b9d",
+    "timestamp": "2026-11-13T14:54:37.681543+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b86e40ba-66aa-4fad-9c45-e0dca8480fbd",
+    "timestamp": "2026-11-13T14:54:37.683166+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "f7642f63-741d-44c8-a695-87d6c5679d73",
+    "timestamp": "2026-11-13T14:54:43.136227+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "77a6ba57-342d-4431-bcab-477feb42d924",
+    "timestamp": "2026-11-13T14:54:43.138216+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "ff41821d-9e79-429b-a8c6-28fa7218c9a9",
+    "timestamp": "2026-11-13T14:54:43.140180+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "36d9b7c1-a2b7-49cf-94a9-442b38826833",
+    "timestamp": "2026-11-13T14:54:43.142026+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "c652ade3-23eb-4602-8039-726e1b9d939c",
+    "timestamp": "2026-11-13T14:54:43.143913+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "24d7f37d-effd-4d61-be06-32dd42a29daf",
+    "timestamp": "2026-11-13T14:54:43.146151+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "45069aed-ee0d-46d5-8d2e-31939e5314fc",
+    "timestamp": "2026-11-13T14:54:43.147945+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "387e85e5-6612-4446-b605-25e05737ab43",
+    "timestamp": "2026-11-13T14:54:43.149698+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5771b667-cd26-458f-a922-a9315b072416",
+    "timestamp": "2026-11-13T14:54:43.151466+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "07bd439d-72e3-4338-b344-5139a18df127",
+    "timestamp": "2026-11-13T14:54:43.153236+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "49eabee8-b22b-47eb-8049-f2e7ea699c95",
+    "timestamp": "2026-11-13T14:54:43.156683+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "d6450217-27ab-4ef8-afd1-8771c3600fee",
+    "timestamp": "2026-11-13T14:54:43.160567+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "6e0bf019-7d88-475b-8f5f-7a4823182144",
+    "timestamp": "2026-11-13T14:54:43.164150+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "01e18e91-85e0-4b3e-a346-312c8328dd42",
+    "timestamp": "2026-11-13T14:54:43.167745+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4be5a33c-a786-492f-90be-f4ff508634fd",
+    "timestamp": "2026-11-13T14:54:43.171338+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "f624cded-4742-48da-aeb1-e48879f7d7d9",
+    "timestamp": "2026-11-13T14:54:43.174905+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "15db0286-c944-4d8f-812f-06986e294bdc",
+    "timestamp": "2026-11-13T14:54:43.177706+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1414e32f-67f0-4e96-92ae-9f8498615055",
+    "timestamp": "2026-11-13T14:54:43.181077+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "bbbe3ee9-cc0f-4ec9-87e9-ff58d48ccc01",
+    "timestamp": "2026-11-13T14:54:43.184327+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4633152f-3d53-4f97-9ce8-a024a9913499",
+    "timestamp": "2026-11-13T14:54:43.187776+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "bbfc9dad-a004-48be-89fb-c84a14cf204b",
+    "timestamp": "2026-11-13T14:55:19.000048+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e37caa9d-0132-41fd-854b-6b18356b7d4c",
+    "timestamp": "2026-11-13T14:55:19.002406+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "af17a946-b35a-4fe4-a18c-aa9d147e30a3",
+    "timestamp": "2026-11-13T14:55:19.009877+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "6ca60729-11fe-4454-aff7-e269c2dde386",
+    "timestamp": "2026-11-13T14:55:19.012155+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "a92429a9-3fc7-4953-a740-c7b50cd0ae5d",
+    "timestamp": "2026-11-13T14:55:19.014176+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e00b3f0f-6427-42cc-84d6-82c624745a98",
+    "timestamp": "2026-11-13T14:55:19.016810+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3df1e01c-b630-4cc9-bbd3-fc41e73391ef",
+    "timestamp": "2026-11-13T14:55:19.018697+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "45318ff9-5031-477b-8cea-1efbdcbcd464",
+    "timestamp": "2026-11-13T14:55:19.021201+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "5e9beb10-bc26-4c26-9688-292d81b2cb04",
+    "timestamp": "2026-11-13T14:55:19.023146+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "c5c47e8d-8497-4559-9a17-869b55c2704f",
+    "timestamp": "2026-11-13T14:55:19.025057+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3042b1be-79ed-42a4-9ced-642064f85d44",
+    "timestamp": "2026-11-13T14:55:19.027349+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "cdb71722-b7c5-471d-b24b-9c32a4b33cd5",
+    "timestamp": "2026-11-13T14:55:19.029492+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7f6d9b1e-98b3-454c-8d6e-f1fd241773cb",
+    "timestamp": "2026-11-13T14:55:19.032186+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "998cb5ac-df52-4849-88f2-3a6386aae4ae",
+    "timestamp": "2026-11-13T14:55:19.035333+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e9257157-acfe-4024-b3c8-1a64aa62013a",
+    "timestamp": "2026-11-13T14:55:19.037285+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "249b3001-ad4d-4f5d-9306-24b7fbd06aed",
+    "timestamp": "2026-11-13T14:55:19.039245+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "c2259304-a389-4c46-b8fb-7a01ba5e8bf9",
+    "timestamp": "2026-11-13T14:55:19.041760+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "abb3a0c6-6c6e-4a87-b475-2abb1b7a173c",
+    "timestamp": "2026-11-13T14:55:19.044038+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "d7984fef-c50a-4d68-8000-d7c66e3aca24",
+    "timestamp": "2026-11-13T14:55:19.046360+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "15ab3703-749a-4867-81ab-566738c6f733",
+    "timestamp": "2026-11-13T14:55:19.048755+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "6fd1e3f1-854c-47f2-aca3-0c3783b1ecdc",
+    "timestamp": "2026-11-13T15:26:00.023925+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "33a3c823-9af5-40c0-9daa-b2593a9d3fc6",
+    "timestamp": "2026-11-13T15:26:00.034297+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "25770691-ba0d-4bf7-a296-9c95739ce660",
+    "timestamp": "2026-11-13T15:26:00.036614+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4930faf0-d54e-46fd-8bc3-e159160609a9",
+    "timestamp": "2026-11-13T15:26:00.039167+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "7d6108a6-1876-4488-969e-0e190bfc11c6",
+    "timestamp": "2026-11-13T15:26:00.041235+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "72ee6ffd-2ad7-4f5e-a4c3-9fe3e07a6275",
+    "timestamp": "2026-11-13T15:26:00.043302+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9ee498de-0cc1-4b41-b207-d7d377db1c89",
+    "timestamp": "2026-11-13T15:26:00.045354+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "7190ded4-7428-4e26-82fa-bd5e861a47b2",
+    "timestamp": "2026-11-13T15:26:00.047310+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "dbfc89d9-3f66-473a-ab7b-b7950e7828ba",
+    "timestamp": "2026-11-13T15:26:00.049282+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "3de46e42-bdcc-4238-bc5a-198ab582583d",
+    "timestamp": "2026-11-13T15:26:00.051502+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "884202e0-c554-4c93-8d70-fa08d084fc01",
+    "timestamp": "2026-11-13T15:26:00.053628+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2dd16c71-626f-4b6f-a033-4eff3ed69904",
+    "timestamp": "2026-11-13T15:26:00.055642+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "82241202-35f6-4fe3-90b5-67ee1d6e3572",
+    "timestamp": "2026-11-13T15:26:00.057761+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "0eebbb9c-c337-44aa-aef6-43a9ad229431",
+    "timestamp": "2026-11-13T15:26:00.059859+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "b5f68d7d-5ee5-431d-9773-812fa2031b32",
+    "timestamp": "2026-11-13T15:26:00.061845+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "bddd70be-ac77-467c-9f29-1c617b930123",
+    "timestamp": "2026-11-13T15:26:00.063988+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "0ef44443-577f-4bf2-bdb8-27277fd12811",
+    "timestamp": "2026-11-13T15:26:00.067350+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "e2f42690-c0a1-4cd3-8bf1-56220a20bf45",
+    "timestamp": "2026-11-13T15:26:00.069542+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1b6fe1d8-e52d-4324-a3b7-a1a8fcac31b1",
+    "timestamp": "2026-11-13T15:26:00.071593+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "47c01a12-e5d8-413b-aa5c-693f748bfce5",
+    "timestamp": "2026-11-13T15:26:00.074661+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "59c63cfe-360d-473c-8fb1-ec7f8ae5907c",
+    "timestamp": "2026-11-13T15:28:58.586726+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Sleep Mode",
+    "recommended_node": "Node-01",
+    "predicted_action": "Sleep Mode",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "703695f2-b0ca-45c2-8f89-b0543ac52ae5",
+    "timestamp": "2026-11-13T15:28:58.589338+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-05",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "1d6bbc6f-cb76-45ec-8236-013d7f6c5b51",
+    "timestamp": "2026-11-13T15:28:58.596864+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-07",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "f1392210-7ceb-48c3-a164-1fbc448c88c5",
+    "timestamp": "2026-11-13T15:28:58.599169+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-09",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9e71e4a9-53d0-4c88-9288-4f4c6f4b9bf4",
+    "timestamp": "2026-11-13T15:28:58.601304+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-10",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "0428e844-064d-4c2f-a986-29fe6d209f82",
+    "timestamp": "2026-11-13T15:28:58.603580+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-03",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "4ada7cf4-083b-457a-8ad0-9aa133962a98",
+    "timestamp": "2026-11-13T15:28:58.605682+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-11",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "a6ba85fe-c41e-4194-b6d8-07e05d3c9803",
+    "timestamp": "2026-11-13T15:28:58.608015+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-12",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "284f3413-0d5c-4911-ac56-59e4a64dfa85",
+    "timestamp": "2026-11-13T15:28:58.610157+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-14",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "17431ee3-2ce2-4043-992f-2c58a73aa59a",
+    "timestamp": "2026-11-13T15:28:58.612185+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-15",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8a778043-f5e9-47a2-912c-dabc2df9a0e1",
+    "timestamp": "2026-11-13T15:28:58.614520+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-16",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "c4230017-ced9-48f6-9e68-bafb53be3348",
+    "timestamp": "2026-11-13T15:28:58.616642+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-18",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "08440915-7c5d-47fe-be24-8a0265797265",
+    "timestamp": "2026-11-13T15:28:58.619349+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-19",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "143ce2ed-0964-4b53-840f-c910ea013ee2",
+    "timestamp": "2026-11-13T15:28:58.621780+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-20",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation required follow-up intervention",
+    "status": "POOR"
+  },
+  {
+    "id": "0db384e1-076b-46ee-8a3d-f733b44e39a7",
+    "timestamp": "2026-11-13T15:28:58.623912+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-08",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "9b152b5b-93c6-4003-b322-c24e99e52790",
+    "timestamp": "2026-11-13T15:28:58.625983+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-06",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation worked but required additional monitoring",
+    "status": "MIXED"
+  },
+  {
+    "id": "8dd20fd1-78c3-4619-891c-9db305876abd",
+    "timestamp": "2026-11-13T15:28:58.628229+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-04",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "b8d4909d-12e2-4ee5-a0f4-5c92f366a57f",
+    "timestamp": "2026-11-13T15:28:58.631177+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-13",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "8217a452-9821-4a52-80d0-73985c1cd259",
+    "timestamp": "2026-11-13T15:28:58.634118+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-02",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
+  },
+  {
+    "id": "2699be0c-88da-46f6-b3ef-0b43681341eb",
+    "timestamp": "2026-11-13T15:28:58.636500+00:00",
+    "module": "cost_optimization",
+    "recommendation": "Keep Running",
+    "recommended_node": "Node-17",
+    "predicted_action": "Keep Running",
+    "actual_outcome": "Recommendation achieved the expected operational result",
+    "status": "GOOD"
   }
 ]

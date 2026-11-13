@@ -6,8 +6,8 @@ import { Rocket, CheckCircle, Server, Cpu, MemoryStick, HardDrive, ChevronRight,
 function Step({ n, label, status }) {
   const st = {
     done:   { icon: CheckCircle, color:'text-emerald-400', bg:'bg-emerald-500/15 border-emerald-500/30' },
-    active: { icon: Activity,    color:'text-blue-400',    bg:'bg-blue-500/15 border-blue-500/30' },
-    pending:{ icon: null,        color:'text-slate-600',   bg:'bg-[#162040] border-[#1e2d52]' },
+    active: { icon: Activity,    color:'text-brand-400',    bg:'bg-brand-500/15 border-brand-500/30' },
+    pending:{ icon: null,        color:'text-slate-600',   bg:'bg-line border-edge' },
   }[status];
   const Icon = st.icon;
   return (
@@ -54,17 +54,17 @@ export default function DeploymentPage() {
   };
 
   return (
-    <div className="p-6 max-w-4xl">
-      <div className="flex items-center gap-2 text-sm text-slate-400 mb-6">
+    <div className="p-4 sm:p-6 max-w-4xl">
+      <div className="flex flex-wrap items-center gap-2 text-sm text-slate-400 mb-6">
         <button onClick={()=>navigate('/app/requests')} className="hover:text-white">Requests</button>
         <ChevronRight size={14}/>
         <button onClick={()=>navigate(`/app/schedule/${requestId}`)} className="hover:text-white">{requestId}</button>
         <ChevronRight size={14}/>
-        <span className="text-blue-400">Deploy</span>
+        <span className="text-brand-400">Deploy</span>
       </div>
 
       <div className="flex items-center gap-3 mb-8">
-        <div className="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center"><Rocket size={24} className="text-blue-400"/></div>
+        <div className="w-12 h-12 rounded-xl bg-brand-500/15 border border-brand-500/30 flex items-center justify-center"><Rocket size={24} className="text-brand-400"/></div>
         <div>
           <h1 className="text-2xl font-bold text-white">Execute Deployment</h1>
           <p className="text-slate-400 text-sm">AI recommends <span className="text-white font-medium">{nodeId}</span> with {confidence.toFixed(1)}% confidence</p>
@@ -73,10 +73,10 @@ export default function DeploymentPage() {
 
       <div className="grid lg:grid-cols-2 gap-5">
         <div className="space-y-4">
-          <div className="bg-[#0d1428] border border-blue-500/20 rounded-xl p-5">
+          <div className="bg-panel border border-brand-500/20 rounded-xl p-5">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"/>
-              <h3 className="text-sm font-semibold text-blue-300 uppercase tracking-wider">AI Scheduling Result</h3>
+              <div className="w-2 h-2 rounded-full bg-brand-400 animate-pulse"/>
+              <h3 className="text-sm font-semibold text-brand-300 uppercase tracking-wider">AI Scheduling Result</h3>
             </div>
             <div className="flex items-center justify-between mb-4">
               <div><div className="text-xs text-slate-400">Recommended Server</div><div className="text-3xl font-black text-white">{nodeId}</div></div>
@@ -92,30 +92,30 @@ export default function DeploymentPage() {
           </div>
 
           {request && (
-            <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+            <div className="bg-panel border border-line rounded-xl p-5">
               <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Resources to Allocate</h3>
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  [Cpu,'CPU',`${request.required_cpu} vCPU`,'text-blue-400'],
-                  [MemoryStick,'RAM',`${request.required_ram_gb} GB`,'text-violet-400'],
-                  [HardDrive,'Disk',`${request.required_disk_gb} GB`,'text-cyan-400'],
+                  [Cpu,'CPU',`${request.required_cpu} vCPU`,'text-brand-400'],
+                  [MemoryStick,'RAM',`${request.required_ram_gb} GB`,'text-sage-400'],
+                  [HardDrive,'Disk',`${request.required_disk_gb} GB`,'text-sea-400'],
                 ].map(([Icon,l,v,c])=>(
-                  <div key={l} className="bg-[#111b35] rounded-xl p-3 text-center">
+                  <div key={l} className="bg-inset rounded-xl p-3 text-center">
                     <Icon size={20} className={`${c} mx-auto mb-2`}/>
                     <div className="text-white font-bold text-sm">{v}</div>
                     <div className="text-slate-500 text-xs mt-0.5">{l}</div>
                   </div>
                 ))}
               </div>
-              <div className="mt-3 pt-3 border-t border-[#162040] text-xs text-slate-400">
-                {request.service_name} · {request.customer_name} · Job: <span className="text-violet-400">{request.job_type}</span>
+              <div className="mt-3 pt-3 border-t border-line text-xs text-slate-400">
+                {request.service_name} · {request.customer_name} · Job: <span className="text-sage-400">{request.job_type}</span>
               </div>
             </div>
           )}
         </div>
 
         <div className="space-y-4">
-          <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+          <div className="bg-panel border border-line rounded-xl p-5">
             <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Deployment Pipeline</h3>
             <div className="space-y-2">
               {STEPS.map((s,i)=>(<Step key={i} n={i+1} label={s} status={step>i+1?'done':step===i+1?'active':'pending'}/>))}
@@ -151,7 +151,7 @@ export default function DeploymentPage() {
 
           {!done && (
             <button onClick={handleDeploy} disabled={deploying||!nodeId}
-              className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-lg shadow-blue-500/25">
+              className="w-full bg-brand-600 hover:bg-brand-500 disabled:opacity-50 text-ink py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-lg shadow-brand-500/25">
               {deploying ? <><div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"/>Deploying to {nodeId}...</> : <><Rocket size={20}/> Deploy to {nodeId}</>}
             </button>
           )}

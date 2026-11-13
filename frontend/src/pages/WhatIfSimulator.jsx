@@ -11,10 +11,10 @@ function InputField({ label, value, onChange, min, max, step=1, unit }) {
       <label className="block text-xs text-slate-400 uppercase tracking-wider mb-1.5 font-medium">{label}</label>
       <div className="flex items-center gap-2">
         <input type="number" value={value} onChange={e=>onChange(Number(e.target.value))} min={min} max={max} step={step}
-          className="w-full bg-[#111b35] border border-[#1e2d52] rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+          className="w-full bg-inset border border-edge rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"/>
         {unit && <span className="text-slate-400 text-sm flex-shrink-0">{unit}</span>}
       </div>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={e=>onChange(Number(e.target.value))} className="w-full mt-2 accent-blue-500"/>
+      <input type="range" min={min} max={max} step={step} value={value} onChange={e=>onChange(Number(e.target.value))} className="w-full mt-2 accent-brand-500"/>
     </div>
   );
 }
@@ -37,24 +37,24 @@ export default function WhatIfSimulator() {
   ] : [];
 
   return (
-    <div className="p-6">
+    <div className="p-4 sm:p-6">
       <PageHeader title="What-if Simulator" subtitle="Capacity planning — predict future cluster state before deploying"/>
       <div className="grid lg:grid-cols-3 gap-5">
         <div className="space-y-5">
-          <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
-            <div className="flex items-center gap-2 mb-5"><FlaskConical size={18} className="text-blue-400"/><h3 className="font-semibold text-white">Simulation Parameters</h3></div>
+          <div className="bg-panel border border-line rounded-xl p-5">
+            <div className="flex items-center gap-2 mb-5"><FlaskConical size={18} className="text-brand-400"/><h3 className="font-semibold text-white">Simulation Parameters</h3></div>
             <div className="space-y-5">
               <InputField label="Future Deployments" value={params.future_deployments} onChange={v=>setParams(p=>({...p,future_deployments:v}))} min={1} max={100} unit="requests"/>
               <InputField label="Avg CPU per Deployment" value={params.avg_cpu_per_deployment} onChange={v=>setParams(p=>({...p,avg_cpu_per_deployment:v}))} min={1} max={64} unit="vCPU"/>
               <InputField label="Avg RAM per Deployment" value={params.avg_ram_per_deployment} onChange={v=>setParams(p=>({...p,avg_ram_per_deployment:v}))} min={1} max={256} unit="GB"/>
               <InputField label="Avg Disk per Deployment" value={params.avg_disk_per_deployment} onChange={v=>setParams(p=>({...p,avg_disk_per_deployment:v}))} min={10} max={5000} step={10} unit="GB"/>
             </div>
-            <button onClick={run} disabled={loading} className="w-full mt-5 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all">
+            <button onClick={run} disabled={loading} className="w-full mt-5 bg-brand-600 hover:bg-brand-500 disabled:opacity-50 text-ink py-3 rounded-xl font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all">
               {loading ? <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>Running...</> : <><Play size={18}/> Run Simulation</>}
             </button>
           </div>
 
-          <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+          <div className="bg-panel border border-line rounded-xl p-5">
             <h3 className="text-sm font-semibold text-slate-300 mb-3">Quick Scenarios</h3>
             <div className="space-y-2">
               {[
@@ -63,7 +63,7 @@ export default function WhatIfSimulator() {
                 ['GPU Workload Surge',{future_deployments:5,avg_cpu_per_deployment:32,avg_ram_per_deployment:128,avg_disk_per_deployment:1000}],
                 ['Minimal Load',{future_deployments:3,avg_cpu_per_deployment:2,avg_ram_per_deployment:4,avg_disk_per_deployment:50}],
               ].map(([label,p])=>(
-                <button key={label} onClick={()=>setParams(p)} className="w-full text-left bg-[#111b35] hover:bg-[#162040] border border-[#162040] hover:border-blue-500/30 rounded-lg px-3 py-2.5 text-sm text-slate-300 hover:text-white transition-all">{label}</button>
+                <button key={label} onClick={()=>setParams(p)} className="w-full text-left bg-inset hover:bg-line border border-line hover:border-brand-500/30 rounded-lg px-3 py-2.5 text-sm text-slate-300 hover:text-white transition-all">{label}</button>
               ))}
             </div>
           </div>
@@ -71,15 +71,15 @@ export default function WhatIfSimulator() {
 
         <div className="lg:col-span-2 space-y-5">
           {!result && !loading && (
-            <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-16 flex flex-col items-center justify-center text-center">
+            <div className="bg-panel border border-line rounded-xl p-6 sm:p-12 flex flex-col items-center justify-center text-center">
               <FlaskConical size={48} className="text-slate-700 mb-4"/>
               <h3 className="text-slate-300 font-semibold text-lg">Configure & Run Simulation</h3>
               <p className="text-slate-500 text-sm mt-2 max-w-sm">Set your deployment parameters and click "Run Simulation".</p>
             </div>
           )}
           {loading && (
-            <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-16 flex flex-col items-center justify-center">
-              <div className="relative mb-4"><div className="w-16 h-16 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"/><Zap size={22} className="absolute inset-0 m-auto text-blue-400"/></div>
+            <div className="bg-panel border border-line rounded-xl p-6 sm:p-12 flex flex-col items-center justify-center">
+              <div className="relative mb-4"><div className="w-16 h-16 border-4 border-brand-500/20 border-t-brand-500 rounded-full animate-spin"/><Zap size={22} className="absolute inset-0 m-auto text-brand-400"/></div>
               <p className="text-slate-300 font-medium">Simulating {params.future_deployments} deployments...</p>
             </div>
           )}
@@ -95,14 +95,14 @@ export default function WhatIfSimulator() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-panel border border-line rounded-xl p-5">
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Current State</h3>
-                  {[['Avg CPU',`${result.current_state.avg_cpu}%`,'text-blue-400'],['Avg RAM',`${result.current_state.avg_ram}%`,'text-violet-400'],['Total Services',result.current_state.total_services,'text-cyan-400'],['Active Nodes',result.current_state.active_nodes,'text-emerald-400']].map(([l,v,c])=>(
+                  {[['Avg CPU',`${result.current_state.avg_cpu}%`,'text-brand-400'],['Avg RAM',`${result.current_state.avg_ram}%`,'text-sage-400'],['Total Services',result.current_state.total_services,'text-sea-400'],['Active Nodes',result.current_state.active_nodes,'text-emerald-400']].map(([l,v,c])=>(
                     <div key={l} className="flex justify-between items-center py-1"><span className="text-slate-400 text-sm">{l}</span><span className={`font-bold ${c}`}>{v}</span></div>
                   ))}
                 </div>
-                <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+                <div className="bg-panel border border-line rounded-xl p-5">
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">After +{params.future_deployments} Deployments</h3>
                   {[['Avg CPU',`${result.projected_state.avg_cpu}%`],['Avg RAM',`${result.projected_state.avg_ram}%`],['Total Services',result.projected_state.total_services],['Cluster Health',result.projected_state.cluster_health]].map(([l,v])=>(
                     <div key={l} className="flex justify-between items-center py-1"><span className="text-slate-400 text-sm">{l}</span><span className="font-bold text-amber-400">{v}</span></div>
@@ -110,21 +110,21 @@ export default function WhatIfSimulator() {
                 </div>
               </div>
 
-              <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+              <div className="bg-panel border border-line rounded-xl p-5">
                 <h3 className="font-semibold text-white mb-4">Before vs After Comparison</h3>
                 <ResponsiveContainer width="100%" height={200}>
                   <BarChart data={compData} barGap={4}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#162040"/>
-                    <XAxis dataKey="name" tick={{fontSize:12,fill:'#64748b'}}/>
-                    <YAxis tick={{fontSize:12,fill:'#64748b'}}/>
+                    <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line)"/>
+                    <XAxis dataKey="name" tick={{fontSize:12,fill:'#81909f'}}/>
+                    <YAxis tick={{fontSize:12,fill:'#81909f'}}/>
                     <Tooltip
-                      contentStyle={{background:'#0d1428',border:'1px solid #162040',borderRadius:8,color:'#f8fafc'}}
+                      contentStyle={{background:'var(--color-panel)',border:'1px solid var(--color-line)',borderRadius:8,color:'#f8fafc'}}
                       labelStyle={{color:'#f8fafc'}}
                       itemStyle={{color:'#cbd5e1'}}
                       cursor={{fill:'rgba(59, 130, 246, 0.10)'}}
                     />
                     <Legend wrapperStyle={{fontSize:12,color:'#94a3b8'}}/>
-                    <Bar dataKey="Current" fill="#3b82f6" radius={[4,4,0,0]} activeBar={{stroke:'#93c5fd',strokeWidth:1}}/>
+                    <Bar dataKey="Current" fill="#c2ee8d" radius={[4,4,0,0]} activeBar={{stroke:'#d6ffa6',strokeWidth:1}}/>
                     <Bar dataKey="Projected" fill="#f59e0b" radius={[4,4,0,0]} activeBar={{stroke:'#fde68a',strokeWidth:1}}/>
                   </BarChart>
                 </ResponsiveContainer>
@@ -132,8 +132,8 @@ export default function WhatIfSimulator() {
 
               <PlanComparison comparison={result.plan_comparison}/>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-panel border border-line rounded-xl p-5">
                   <h3 className="text-sm font-semibold text-rose-300 mb-3 flex items-center gap-2"><AlertTriangle size={14}/> Overloaded Nodes ({result.overloaded_nodes?.length||0})</h3>
                   {result.overloaded_nodes?.length===0 ? <div className="flex items-center gap-2 text-emerald-400 text-sm"><CheckCircle size={14}/> None overloaded</div> : (
                     <div className="space-y-2">{result.overloaded_nodes?.map(n=>(
@@ -144,7 +144,7 @@ export default function WhatIfSimulator() {
                     ))}</div>
                   )}
                 </div>
-                <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+                <div className="bg-panel border border-line rounded-xl p-5">
                   <h3 className="text-sm font-semibold text-emerald-300 mb-3 flex items-center gap-2"><Server size={14}/> Suggested Servers</h3>
                   {result.suggested_servers?.length===0 ? <div className="text-amber-400 text-sm">None available</div> : (
                     <div className="space-y-1.5">{result.suggested_servers?.map((n,i)=>(

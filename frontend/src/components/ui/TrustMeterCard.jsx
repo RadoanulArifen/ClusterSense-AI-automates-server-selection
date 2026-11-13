@@ -2,17 +2,17 @@ import { ShieldCheck, Clock3 } from 'lucide-react';
 
 export default function TrustMeterCard({ trust, compact = false }) {
   if (!trust) {
-    return <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5 animate-pulse"><div className="h-4 w-32 bg-[#162040] rounded"/><div className="h-9 w-20 bg-[#162040] rounded mt-3"/></div>;
+    return <div className="bg-panel border border-line rounded-xl p-5 animate-pulse"><div className="h-4 w-32 bg-line rounded"/><div className="h-9 w-20 bg-line rounded mt-3"/></div>;
   }
 
   const updatedAt = trust.last_updated ? new Date(trust.last_updated).toLocaleString() : '—';
   const scoreColor = trust.trust_score >= 80 ? 'text-emerald-400' : trust.trust_score >= 60 ? 'text-amber-400' : 'text-rose-400';
 
   return (
-    <div className="bg-[#0d1428] border border-violet-500/20 rounded-xl p-5">
+    <div className="bg-panel border border-sage-500/20 rounded-xl p-5">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="flex items-center gap-2 text-violet-300"><ShieldCheck size={16}/><span className="text-xs font-semibold uppercase tracking-wider">Recommendation Trust</span></div>
+          <div className="flex items-center gap-2 text-sage-300"><ShieldCheck size={16}/><span className="text-xs font-semibold uppercase tracking-wider">Recommendation Trust</span></div>
           <h3 className="text-sm font-semibold text-white mt-2">{trust.recommendation_type}</h3>
         </div>
         <div className="text-right">
@@ -22,11 +22,11 @@ export default function TrustMeterCard({ trust, compact = false }) {
       </div>
 
       <div className="grid grid-cols-2 gap-3 mt-4">
-        <div className="bg-[#111b35] rounded-lg px-3 py-2.5">
+        <div className="bg-inset rounded-lg px-3 py-2.5">
           <div className="text-xs text-slate-500">Historical Accuracy</div>
-          <div className="text-lg font-bold text-blue-300 mt-0.5">{trust.historical_accuracy?.toFixed(0)}%</div>
+          <div className="text-lg font-bold text-brand-300 mt-0.5">{trust.historical_accuracy?.toFixed(0)}%</div>
         </div>
-        <div className="bg-[#111b35] rounded-lg px-3 py-2.5">
+        <div className="bg-inset rounded-lg px-3 py-2.5">
           <div className="text-xs text-slate-500">Total Recommendations</div>
           <div className="text-lg font-bold text-white mt-0.5">{trust.total_recommendations}</div>
         </div>

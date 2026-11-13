@@ -17,9 +17,9 @@ const CUSTOMERS = ['Acme Corp','TechVision Inc','DataFlow Systems','CloudPeak Lt
 
 const CC = {
   emerald:{ bg:'bg-emerald-500/10', border:'border-emerald-500/20', text:'text-emerald-400', btn:'bg-emerald-600 hover:bg-emerald-500' },
-  blue:   { bg:'bg-blue-500/10',    border:'border-blue-500/20',    text:'text-blue-400',    btn:'bg-blue-600 hover:bg-blue-500' },
-  cyan:   { bg:'bg-cyan-500/10',    border:'border-cyan-500/20',    text:'text-cyan-400',    btn:'bg-cyan-600 hover:bg-cyan-500' },
-  violet: { bg:'bg-violet-500/10',  border:'border-violet-500/20',  text:'text-violet-400',  btn:'bg-violet-600 hover:bg-violet-500' },
+  blue:   { bg:'bg-brand-500/10',    border:'border-brand-500/20',    text:'text-brand-400',    btn:'bg-brand-600 hover:bg-brand-500' },
+  cyan:   { bg:'bg-sea-500/10',    border:'border-sea-500/20',    text:'text-sea-400',    btn:'bg-sea-600 hover:bg-sea-500' },
+  violet: { bg:'bg-sage-500/10',  border:'border-sage-500/20',  text:'text-sage-400',  btn:'bg-sage-600 hover:bg-sage-500' },
   amber:  { bg:'bg-amber-500/10',   border:'border-amber-500/20',   text:'text-amber-400',   btn:'bg-amber-600 hover:bg-amber-500' },
   rose:   { bg:'bg-rose-500/10',    border:'border-rose-500/20',    text:'text-rose-400',    btn:'bg-rose-600 hover:bg-rose-500' },
   pink:   { bg:'bg-pink-500/10',    border:'border-pink-500/20',    text:'text-pink-400',    btn:'bg-pink-600 hover:bg-pink-500' },
@@ -51,27 +51,27 @@ export default function OrderPortal() {
   };
 
   return (
-    <div className="min-h-screen bg-[#020408]">
-      <div className="bg-[#0a0f1e] border-b border-[#162040] px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <div className="min-h-screen bg-canvas">
+      <div className="bg-shell border-b border-line px-4 sm:px-6 py-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center"><Zap size={16} className="text-white"/></div>
+            <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center"><Zap size={16} className="text-ink"/></div>
             <div><div className="text-sm font-bold text-white">HostNova Cloud</div><div className="text-xs text-slate-400">Demo Order Portal</div></div>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={()=>navigate('/')} className="text-slate-400 hover:text-white text-sm">← Home</button>
-            <button onClick={()=>navigate('/login')} className="bg-[#162040] border border-[#1e2d52] text-white px-4 py-2 rounded-lg text-sm">Admin Login</button>
+            <button onClick={()=>navigate('/login')} className="bg-line border border-edge text-white px-4 py-2 rounded-lg text-sm">Admin Login</button>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6 text-sm text-blue-300">
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"/>
+          <div className="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/20 rounded-full px-4 py-2 mb-6 text-sm text-brand-300">
+            <div className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"/>
             Clicking Submit triggers the full ClusterSense AI workflow
           </div>
-          <h1 className="text-4xl font-black text-white mb-3">Choose Your Hosting Service</h1>
+          <h1 className="text-3xl sm:text-4xl font-black text-white mb-3">Choose Your Hosting Service</h1>
           <p className="text-slate-400 max-w-xl mx-auto text-sm">Each service maps to a real job type from the Smart Scheduling dataset. The AI scores all 20 nodes and picks the best one.</p>
         </div>
 
@@ -90,7 +90,7 @@ export default function OrderPortal() {
             const c = CC[svc.color] || CC.blue;
             const loading = sub === svc.type;
             return (
-              <div key={svc.type} className={`bg-[#0d1428] border ${c.border} rounded-2xl overflow-hidden hover:scale-[1.01] transition-all`}>
+              <div key={svc.type} className={`bg-panel border ${c.border} rounded-2xl overflow-hidden hover:scale-[1.01] transition-all`}>
                 <div className={`${c.bg} px-5 py-4 border-b ${c.border}`}>
                   <div className="flex items-center justify-between mb-2">
                     <span className={`text-xs font-bold uppercase ${c.text}`}>{svc.job}</span>
@@ -105,14 +105,14 @@ export default function OrderPortal() {
                   <p className="text-xs text-slate-400 mb-4">{svc.desc}</p>
                   <div className="grid grid-cols-2 gap-2 mb-4">
                     {[['CPU',`${svc.cpu} vCores`],['RAM',`${svc.ram} GB`],['Disk',`${svc.disk} GB`],['Priority',svc.priority]].map(([l,v])=>(
-                      <div key={l} className="bg-[#111b35] rounded-lg px-3 py-2">
+                      <div key={l} className="bg-inset rounded-lg px-3 py-2">
                         <div className="text-xs text-slate-500">{l}</div>
                         <div className="text-xs font-semibold text-slate-200 mt-0.5">{v}</div>
                       </div>
                     ))}
                   </div>
                   <button onClick={()=>order(svc)} disabled={loading||!!ok}
-                    className={`w-full ${c.btn} disabled:opacity-50 text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all`}>
+                    className={`w-full ${c.btn} disabled:opacity-50 text-ink py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all`}>
                     {loading ? <><Loader2 size={15} className="animate-spin"/>Creating...</> : <>Submit Request <ArrowRight size={15}/></>}
                   </button>
                 </div>

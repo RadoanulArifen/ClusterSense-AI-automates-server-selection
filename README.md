@@ -68,3 +68,22 @@ even when those files are tracked in Git. Inspect the ZIP before uploading.
 
 See [LICENSE-NOTE.md](LICENSE-NOTE.md) for code, dependency and dataset licensing
 notes. See [CHANGELOG.md](CHANGELOG.md) for release history.
+
+## One-click reviewer login
+
+The login page includes **Continue as Demo Admin** for the application's only
+supported role, administrator. It opens the full dashboard and simulated
+order/deployment workflows without entering credentials. Normal administrator
+login remains available.
+
+On a **dedicated demo installation** with an isolated PostgreSQL database, set
+`DEMO_LOGIN_ENABLED=true` in the backend environment and restart the backend
+(or recreate it with `docker compose up -d --build`). Startup provisions a
+separate demo administrator with a random, undisclosed password, including when
+nodes have already been seeded. Visitors receive a normal bearer token valid
+for one hour. No administrator credentials are bundled into the frontend.
+
+Demo visitors share the demo workspace and can change its records; use only
+sample data there. The flag defaults to `false`. Setting it back to `false`
+disables passwordless login and rejects existing demo sessions on their next
+API request. Do not enable it on an installation containing private records.

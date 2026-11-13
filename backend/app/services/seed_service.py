@@ -1,10 +1,11 @@
 """Seed demo data — node metrics match real dataset columns"""
-import os, random, uuid
+import os, random, uuid, secrets
 from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app.models.models import User, Node, DeploymentRequest, Deployment, NodeMetric, Alert, AuditLog
 from app.security import get_password_hash
+from app.services.demo_auth import DEMO_EMAIL, demo_login_enabled
 
 CUSTOMERS = [
     "Acme Corp","TechVision Inc","DataFlow Systems","CloudPeak Ltd","NexGen Solutions",
@@ -38,6 +39,11 @@ async def seed_demo_data():
             db.add(User(email=os.environ["ADMIN_EMAIL"],
                         hashed_password=get_password_hash(password),
                         full_name="Infrastructure Admin", role="admin"))
+            db.commit()
+        if demo_login_enabled() and not db.query(User).filter(User.email == DEMO_EMAIL).first():
+            db.add(User(email=DEMO_EMAIL,
+                        hashed_password=get_password_hash(secrets.token_urlsafe(32)),
+                        full_name="Demo Administrator", role="admin", is_active=True))
             db.commit()
         if db.query(Node).count():
             return

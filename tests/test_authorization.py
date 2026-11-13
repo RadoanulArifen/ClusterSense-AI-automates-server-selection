@@ -26,7 +26,7 @@ class AuthorizationTests(unittest.TestCase):
         app.dependency_overrides.clear()
 
     def test_every_infrastructure_endpoint_requires_admin(self):
-        public = {'/api/auth/login', '/api/auth/me'}
+        public = {'/api/auth/login', '/api/auth/me', '/api/auth/demo', '/api/auth/demo-login'}
         paths = [r for r in app.routes if r.path.startswith('/api/') and r.path not in public]
         self.assertTrue(paths)
         for route in paths:

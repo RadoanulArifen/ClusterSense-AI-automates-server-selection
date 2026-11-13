@@ -246,5 +246,67 @@
     },
     "winning_plan": "Plan B",
     "recommendation_reason": "Lower estimated cost, higher trust score."
+  },
+  {
+    "id": "16dee851-c4fb-4fd2-b3cc-e5b3a54f53f2",
+    "timestamp": "2026-11-13T15:26:07.667212+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
+  },
+  {
+    "id": "600375cd-dd3e-4eb2-a782-acbfa375c184",
+    "timestamp": "2026-11-13T15:30:00.840241+00:00",
+    "request": {
+      "future_deployments": 10,
+      "avg_cpu_per_deployment": 4.0,
+      "avg_ram_per_deployment": 8.0
+    },
+    "plan_a": {
+      "name": "Plan A",
+      "recommended_node": "Node-15",
+      "estimated_cost": 50.4,
+      "expected_cpu_load": 73.5,
+      "expected_ram_usage": 38.1,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.5,
+      "expected_outcome": "Higher Performance"
+    },
+    "plan_b": {
+      "name": "Plan B",
+      "recommended_node": "Node-07",
+      "estimated_cost": 42.3,
+      "expected_cpu_load": 84.8,
+      "expected_ram_usage": 23.8,
+      "predicted_risk": "MEDIUM",
+      "trust_score": 84.7,
+      "expected_outcome": "Lower Operational Cost"
+    },
+    "winning_plan": "Plan B",
+    "recommendation_reason": "Lower estimated cost, higher trust score."
   }
 ]

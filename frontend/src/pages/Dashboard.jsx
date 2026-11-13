@@ -11,7 +11,7 @@ import { OutcomeStatusBadge } from '../components/ui/OutcomeHistoryTable.jsx';
 const Tip = ({active,payload,label,unit='%'}) => {
   if (!active||!payload?.length) return null;
   return (
-    <div className="bg-[#0d1428] border border-[#162040] rounded-lg px-3 py-2 text-xs">
+    <div className="bg-panel border border-line rounded-lg px-3 py-2 text-xs">
       <p className="text-slate-400 mb-1">{label}</p>
       {payload.map(p=><p key={p.name} style={{color:p.color}}>{p.name}: {p.value?.toFixed(1)}{unit}</p>)}
     </div>
@@ -51,16 +51,16 @@ export default function Dashboard() {
   const chartData = key => trends?.[key]?.map(d=>({...d,name:d.time})) || [];
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex items-start justify-between">
+    <div className="p-4 sm:p-6 space-y-6">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold text-white flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-white flex flex-wrap items-center gap-2">
             Live Cluster Dashboard
             <span className="flex items-center gap-1.5 bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full text-xs font-medium">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"/> LIVE
             </span>
           </h1>
-          <p className="text-slate-400 text-sm mt-1 flex items-center gap-2"><Clock size={12}/> Last updated: {last.toLocaleTimeString()} · Auto-refreshes every 3s</p>
+          <p className="text-slate-400 text-sm mt-1 flex flex-wrap items-center gap-2"><Clock size={12}/> Last updated: {last.toLocaleTimeString()} · Auto-refreshes every 3s</p>
         </div>
         {active.length > 0 && (
           <div className="flex items-center gap-2 bg-rose-500/10 border border-rose-500/30 rounded-xl px-4 py-2">
@@ -69,7 +69,7 @@ export default function Dashboard() {
         )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-4">
         <StatCard title="Total Servers" value={stats?.total_servers ?? '—'} icon={Server} color="blue" pulse/>
         <StatCard title="Healthy"       value={stats?.healthy_servers ?? '—'} icon={CheckCircle} color="emerald"/>
         <StatCard title="Warning"       value={stats?.warning_servers ?? '—'} icon={AlertTriangle} color="amber"/>
@@ -77,34 +77,34 @@ export default function Dashboard() {
         <StatCard title="Active Jobs"   value={stats?.total_running_services ?? '—'} icon={Activity} color="violet" pulse/>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-4">
         <StatCard title="Avg CPU"    value={`${stats?.avg_cpu_usage?.toFixed(1) ?? '—'}%`} icon={Cpu} color="blue"/>
         <StatCard title="Avg RAM"    value={`${stats?.avg_ram_usage?.toFixed(1) ?? '—'}%`} icon={Server} color="violet"/>
         <StatCard title="Avg Disk"   value={`${stats?.avg_disk_usage?.toFixed(1) ?? '—'}%`} icon={HardDrive} color="cyan"/>
         <StatCard title="Power"      value={`${stats?.total_power_kw?.toFixed(1) ?? '—'} kW`} icon={Zap} color="amber"/>
-        <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-4">
+        <div className="bg-panel border border-line rounded-xl p-4">
           <div className="text-xs text-slate-400 uppercase tracking-wider">Cluster Health</div>
           <div className={`text-3xl font-black mt-1 ${healthColor}`}>{health.toFixed(0)}%</div>
-          <div className="mt-2 h-1.5 bg-[#162040] rounded-full">
+          <div className="mt-2 h-1.5 bg-line rounded-full">
             <div className={`h-full rounded-full transition-all duration-700 ${health>80?'bg-emerald-500':health>60?'bg-amber-500':'bg-rose-500'}`} style={{width:`${health}%`}}/>
           </div>
         </div>
       </div>
 
       <section>
-        <div className="flex items-center gap-2 mb-4"><ShieldCheck size={18} className="text-violet-400"/><h2 className="text-lg font-semibold text-white">Recommendation Trust Meter</h2></div>
+        <div className="flex items-center gap-2 mb-4"><ShieldCheck size={18} className="text-sage-400"/><h2 className="text-lg font-semibold text-white">Recommendation Trust Meter</h2></div>
         <div className="grid lg:grid-cols-2 gap-5">
           <TrustMeterCard trust={trustMeters?.scheduling}/>
           <TrustMeterCard trust={trustMeters?.cost_optimization}/>
         </div>
       </section>
 
-      <div className="bg-[#0d1428] border border-[#162040] rounded-xl overflow-hidden">
-        <div className="px-5 py-4 border-b border-[#162040] flex items-center justify-between">
+      <div className="bg-panel border border-line rounded-xl overflow-hidden">
+        <div className="px-5 py-4 border-b border-line flex items-center justify-between">
           <h2 className="font-semibold text-white">Recent Outcomes</h2>
           <span className="text-xs text-slate-500">Last 5 recommendation records</span>
         </div>
-        <div className="divide-y divide-[#162040]">
+        <div className="divide-y divide-line">
           {recentOutcomes.length === 0 ? <div className="px-5 py-6 text-sm text-slate-500">No recommendation outcomes recorded yet.</div> : recentOutcomes.map(record=>
             <div key={record.id} className="px-5 py-3 flex flex-wrap items-center gap-3 justify-between">
               <div className="min-w-0"><div className="text-sm text-white truncate">{record.recommendation}</div><div className="text-xs text-slate-500">{record.module === 'scheduling' ? 'Scheduling' : 'Cost Optimization'} · <span className="font-mono">{record.recommended_node}</span></div></div>
@@ -114,31 +114,31 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="bg-[#0d1428] border border-violet-500/20 rounded-xl p-5">
+      <div className="bg-panel border border-sage-500/20 rounded-xl p-5">
         <div className="flex items-center justify-between gap-3 mb-3"><h2 className="font-semibold text-white">Latest Plan Comparison</h2><span className="text-xs text-slate-500">What-if Simulator</span></div>
         {latestPlanComparison?.winning_plan ? (() => {
           const winningPlan = latestPlanComparison[latestPlanComparison.winning_plan === 'Plan A' ? 'plan_a' : 'plan_b'];
-          return <div className="grid sm:grid-cols-3 gap-4"><div><div className="text-xs text-slate-500">Latest Compared Request</div><div className="text-sm font-semibold text-white mt-1">{latestPlanComparison.request?.future_deployments} deployments</div></div><div><div className="text-xs text-slate-500">Winning Plan</div><div className="text-sm font-semibold text-emerald-400 mt-1">{latestPlanComparison.winning_plan} · {winningPlan?.recommended_node}</div></div><div><div className="text-xs text-slate-500">Trust Score</div><div className="text-sm font-semibold text-violet-300 mt-1">{winningPlan?.trust_score?.toFixed(1)}%</div></div></div>;
+          return <div className="grid sm:grid-cols-3 gap-4"><div><div className="text-xs text-slate-500">Latest Compared Request</div><div className="text-sm font-semibold text-white mt-1">{latestPlanComparison.request?.future_deployments} deployments</div></div><div><div className="text-xs text-slate-500">Winning Plan</div><div className="text-sm font-semibold text-emerald-400 mt-1">{latestPlanComparison.winning_plan} · {winningPlan?.recommended_node}</div></div><div><div className="text-xs text-slate-500">Trust Score</div><div className="text-sm font-semibold text-sage-300 mt-1">{winningPlan?.trust_score?.toFixed(1)}%</div></div></div>;
         })() : <div className="text-sm text-slate-500">Run a What-if simulation to generate a plan comparison.</div>}
       </div>
 
       <div className="grid lg:grid-cols-2 gap-5">
         {[
-          {title:'CPU Utilization Trend', key:'cpu',         color:'#3b82f6', unit:'%'},
-          {title:'RAM Utilization Trend', key:'ram',         color:'#8b5cf6', unit:'%'},
-          {title:'Network Usage Trend',   key:'network',     color:'#06b6d4', unit:'%'},
+          {title:'CPU Utilization Trend', key:'cpu',         color:'#c2ee8d', unit:'%'},
+          {title:'RAM Utilization Trend', key:'ram',         color:'#91b89a', unit:'%'},
+          {title:'Network Usage Trend',   key:'network',     color:'#80bcb0', unit:'%'},
           {title:'Temperature Trend',     key:'temperature', color:'#f59e0b', unit:'°C'},
         ].map(({title,key,color,unit})=>(
-          <div key={key} className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+          <div key={key} className="bg-panel border border-line rounded-xl p-5">
             <h3 className="text-sm font-semibold text-slate-300 mb-4">{title}</h3>
             <ResponsiveContainer width="100%" height={160}>
               <AreaChart data={chartData(key)} margin={{top:5,right:5,bottom:5,left:0}}>
                 <defs><linearGradient id={`g-${key}`} x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor={color} stopOpacity={0.3}/><stop offset="95%" stopColor={color} stopOpacity={0}/>
                 </linearGradient></defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#162040"/>
-                <XAxis dataKey="time" tick={{fontSize:10,fill:'#475569'}}/>
-                <YAxis tick={{fontSize:10,fill:'#475569'}}/>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line)"/>
+                <XAxis dataKey="time" tick={{fontSize:10,fill:'#81909f'}}/>
+                <YAxis tick={{fontSize:10,fill:'#81909f'}}/>
                 <Tooltip content={<Tip unit={unit}/>}/>
                 <Area type="monotone" dataKey="value" name={key.toUpperCase()} stroke={color} fill={`url(#g-${key})`} strokeWidth={2} dot={false}/>
               </AreaChart>
@@ -147,14 +147,14 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <div className="bg-[#0d1428] border border-[#162040] rounded-xl overflow-hidden">
-        <div className="px-5 py-4 border-b border-[#162040] flex items-center justify-between">
+      <div className="bg-panel border border-line rounded-xl overflow-hidden">
+        <div className="px-5 py-4 border-b border-line flex items-center justify-between">
           <h3 className="font-semibold text-white">Node Status Table</h3>
           <div className="text-xs text-slate-400">{nodes.length} nodes active</div>
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable data table">
           <table className="w-full">
-            <thead className="bg-[#111b35]">
+            <thead className="bg-inset">
               <tr>{['Node','CPU','RAM','Disk','Temp','Jobs','Power','Health','Status'].map(h=><th key={h} className="table-th">{h}</th>)}</tr>
             </thead>
             <tbody>
@@ -179,9 +179,9 @@ export default function Dashboard() {
       </div>
 
       {active.length > 0 && (
-        <div className="bg-[#0d1428] border border-rose-500/20 rounded-xl overflow-hidden">
+        <div className="bg-panel border border-rose-500/20 rounded-xl overflow-hidden">
           <div className="px-5 py-4 border-b border-rose-500/20 flex items-center gap-2"><AlertTriangle size={16} className="text-rose-400"/><h3 className="font-semibold text-rose-300">Active Alerts ({active.length})</h3></div>
-          <div className="divide-y divide-[#162040]">
+          <div className="divide-y divide-line">
             {active.slice(0,5).map(a=>(
               <div key={a.id} className="px-5 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">

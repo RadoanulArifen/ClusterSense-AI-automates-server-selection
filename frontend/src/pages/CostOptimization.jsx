@@ -24,7 +24,7 @@ export default function CostOptimization() {
   const topSavings = recs.filter(r=>r.estimated_saving_monthly>0).sort((a,b)=>b.estimated_saving_monthly-a.estimated_saving_monthly).slice(0,8);
 
   return (
-    <div className="p-6">
+    <div className="p-4 sm:p-6">
       <PageHeader title="Cost Optimization" subtitle="GradientBoosting model · 99.9% accuracy · Trained on 20,000 real cost records">
         <button
           type="button"
@@ -37,15 +37,15 @@ export default function CostOptimization() {
         </button>
       </PageHeader>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-4 mb-6">
         {[
           ['Monthly Cost',       `$${summary.total_monthly_cost?.toFixed(0)??'—'}`,      'text-white',    DollarSign],
           ['Potential Savings/Mo',`$${summary.total_saving_monthly?.toFixed(0)??'—'}`,   'text-emerald-400', TrendingDown],
           ['Annual Savings',     `$${summary.total_saving_annual?.toFixed(0)??'—'}`,     'text-emerald-300', TrendingDown],
           ['Idle Servers',       summary.idle_servers??'—',                              'text-amber-400', Power],
-          ['Avg Utilization',    `${summary.avg_utilization_score?.toFixed(1)??'—'}%`,   'text-blue-400',  Layers],
+          ['Avg Utilization',    `${summary.avg_utilization_score?.toFixed(1)??'—'}%`,   'text-brand-400',  Layers],
         ].map(([label,value,color,Icon])=>(
-          <div key={label} className="bg-[#0d1428] border border-[#162040] rounded-xl p-4">
+          <div key={label} className="bg-panel border border-line rounded-xl p-4">
             <div className="flex items-center justify-between mb-2"><span className="text-xs text-slate-400">{label}</span><Icon size={16} className={color}/></div>
             <div className={`text-2xl font-black ${color}`}>{value}</div>
           </div>
@@ -55,15 +55,15 @@ export default function CostOptimization() {
       {data?.trust_meter && <div className="mb-5"><TrustMeterCard trust={data.trust_meter} compact/></div>}
 
       <div className="grid lg:grid-cols-3 gap-5 mb-5">
-        <div className="bg-[#0d1428] border border-[#162040] rounded-xl p-5">
-          <h3 className="font-semibold text-white mb-4 flex items-center gap-2"><PieIcon size={16} className="text-blue-400"/> Action Distribution</h3>
+        <div className="bg-panel border border-line rounded-xl p-5">
+          <h3 className="font-semibold text-white mb-4 flex items-center gap-2"><PieIcon size={16} className="text-brand-400"/> Action Distribution</h3>
           <ResponsiveContainer width="100%" height={180}>
             <PieChart>
               <Pie data={pieData} cx="50%" cy="50%" innerRadius={50} outerRadius={75} paddingAngle={3} dataKey="value">
-                {pieData.map(e=><Cell key={e.name} fill={PIE_COLORS[e.name]||'#64748b'}/>)}
+                {pieData.map(e=><Cell key={e.name} fill={PIE_COLORS[e.name]||'#81909f'}/>)}
               </Pie>
               <Tooltip
-                contentStyle={{background:'#0d1428',border:'1px solid #162040',borderRadius:8,color:'#f8fafc'}}
+                contentStyle={{background:'var(--color-panel)',border:'1px solid var(--color-line)',borderRadius:8,color:'#f8fafc'}}
                 labelStyle={{color:'#f8fafc'}}
                 itemStyle={{color:'#34d399'}}
                 cursor={false}
@@ -80,17 +80,17 @@ export default function CostOptimization() {
           </div>
         </div>
 
-        <div className="lg:col-span-2 bg-[#0d1428] border border-[#162040] rounded-xl p-5">
+        <div className="lg:col-span-2 bg-panel border border-line rounded-xl p-5">
           <h3 className="font-semibold text-white mb-4">Top Savings Opportunities ($/month)</h3>
           {isLoading ? <LoadingSpinner/> : (
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={topSavings} margin={{left:0,right:10}}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#162040"/>
-                <XAxis dataKey="node_id" tick={{fontSize:11,fill:'#64748b'}}/>
-                <YAxis tick={{fontSize:11,fill:'#64748b'}} tickFormatter={v=>`$${v}`}/>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--color-line)"/>
+                <XAxis dataKey="node_id" tick={{fontSize:11,fill:'#81909f'}}/>
+                <YAxis tick={{fontSize:11,fill:'#81909f'}} tickFormatter={v=>`$${v}`}/>
                 <Tooltip
                   formatter={v=>[`$${v.toFixed(2)}`,'Monthly Saving']}
-                  contentStyle={{background:'#0d1428',border:'1px solid #162040',borderRadius:8,color:'#f8fafc'}}
+                  contentStyle={{background:'var(--color-panel)',border:'1px solid var(--color-line)',borderRadius:8,color:'#f8fafc'}}
                   labelStyle={{color:'#f8fafc'}}
                   itemStyle={{color:'#34d399'}}
                   cursor={{fill:'rgba(59, 130, 246, 0.10)'}}
@@ -101,7 +101,7 @@ export default function CostOptimization() {
                   radius={[4,4,0,0]}
                   activeBar={{stroke:'#f8fafc',strokeWidth:1}}
                 >
-                  {topSavings.map(r=><Cell key={r.node_id} fill={PIE_COLORS[r.action]||'#3b82f6'}/>)}
+                  {topSavings.map(r=><Cell key={r.node_id} fill={PIE_COLORS[r.action]||'#c2ee8d'}/>)}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
@@ -109,11 +109,11 @@ export default function CostOptimization() {
         </div>
       </div>
 
-      <div className="bg-[#0d1428] border border-[#162040] rounded-xl overflow-hidden">
-        <div className="px-5 py-4 border-b border-[#162040]"><h3 className="font-semibold text-white">All Node Recommendations</h3></div>
-        <div className="overflow-x-auto">
+      <div className="bg-panel border border-line rounded-xl overflow-hidden">
+        <div className="px-5 py-4 border-b border-line"><h3 className="font-semibold text-white">All Node Recommendations</h3></div>
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable data table">
           <table className="w-full">
-            <thead className="bg-[#111b35]">
+            <thead className="bg-inset">
               <tr>{['Node','CPU','RAM','Jobs','Idle (min)','Utilization','Monthly Cost','Saving/Mo','Annual Saving','Action'].map(h=><th key={h} className="table-th">{h}</th>)}</tr>
             </thead>
             <tbody>
@@ -129,7 +129,7 @@ export default function CostOptimization() {
                     <td className="table-td text-slate-300">{r.idle_time_minutes?.toFixed(0)}</td>
                     <td className="table-td">
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-1.5 bg-[#162040] rounded-full"><div className={`h-full rounded-full ${r.utilization_score>60?'bg-emerald-500':r.utilization_score>30?'bg-amber-500':'bg-rose-500'}`} style={{width:`${r.utilization_score}%`}}/></div>
+                        <div className="w-16 h-1.5 bg-line rounded-full"><div className={`h-full rounded-full ${r.utilization_score>60?'bg-emerald-500':r.utilization_score>30?'bg-amber-500':'bg-rose-500'}`} style={{width:`${r.utilization_score}%`}}/></div>
                         <span className="text-xs text-slate-400">{r.utilization_score?.toFixed(0)}%</span>
                       </div>
                     </td>

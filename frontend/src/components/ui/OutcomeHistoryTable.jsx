@@ -15,10 +15,10 @@ export function OutcomeStatusBadge({ status }) {
 
 export default function OutcomeHistoryTable({ records = [], loading = false }) {
   return (
-    <div className="bg-[#0d1428] border border-[#162040] rounded-xl overflow-hidden">
-      <div className="overflow-x-auto">
+    <div className="bg-panel border border-line rounded-xl overflow-hidden">
+      <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable data table">
         <table className="w-full">
-          <thead className="bg-[#111b35]">
+          <thead className="bg-inset">
             <tr>{['Date', 'Module', 'Recommendation', 'Recommended Node', 'Actual Outcome', 'Status'].map(h=><th key={h} className="table-th">{h}</th>)}</tr>
           </thead>
           <tbody>
@@ -29,7 +29,7 @@ export default function OutcomeHistoryTable({ records = [], loading = false }) {
                 <td className="table-td text-slate-400 whitespace-nowrap">{record.timestamp ? new Date(record.timestamp).toLocaleString() : '—'}</td>
                 <td className="table-td"><span className="text-slate-300">{record.module === 'scheduling' ? 'Scheduling' : 'Cost Optimization'}</span></td>
                 <td className="table-td text-white font-medium">{record.recommendation}</td>
-                <td className="table-td font-mono text-blue-300">{record.recommended_node}</td>
+                <td className="table-td font-mono text-brand-300">{record.recommended_node}</td>
                 <td className="table-td text-slate-400 max-w-xs">{record.actual_outcome}</td>
                 <td className="table-td"><OutcomeStatusBadge status={record.status}/></td>
               </tr>

@@ -1,23 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@config "../tailwind.config.js";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --rgb-canvas: 9 14 20;
+    --rgb-shell: 13 20 28;
+    --rgb-panel: 16 23 31;
+    --rgb-inset: 20 30 38;
+    --rgb-line: 38 49 58;
+    --rgb-edge: 50 65 56;
+    --color-canvas: rgb(var(--rgb-canvas));
+    --color-shell: rgb(var(--rgb-shell));
+    --color-panel: rgb(var(--rgb-panel));
+    --color-inset: rgb(var(--rgb-inset));
+    --color-line: rgb(var(--rgb-line));
+    --color-edge: rgb(var(--rgb-edge));
+  }
+  :is(a, button, input, select, textarea):focus-visible {
+    outline: 2px solid #c2ee8d;
+    outline-offset: 3px;
+  }
+  input[type="checkbox"], input[type="radio"], input[type="range"] { accent-color: #c2ee8d; }
   * { box-sizing: border-box; }
-  body { background-color: #020408; color: #e2e8f0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  body { background-color: var(--color-canvas); color: #e2e8f0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
   ::-webkit-scrollbar { width: 6px; height: 6px; }
-  ::-webkit-scrollbar-track { background: #0a0f1e; }
-  ::-webkit-scrollbar-thumb { background: #1e2d52; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+  ::-webkit-scrollbar-track { background: var(--color-shell); }
+  ::-webkit-scrollbar-thumb { background: var(--color-edge); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #c2ee8d; }
 }
 
 @layer components {
-  .card { @apply bg-[#0d1428] border border-[#162040] rounded-xl p-5; }
-  .btn-primary { @apply bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50; }
-  .btn-secondary { @apply bg-[#162040] hover:bg-[#1e2d52] text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer border border-[#1e2d52]; }
-  .table-row { @apply border-b border-[#162040] hover:bg-[#111b35]/50 transition-colors; }
+  .card { @apply bg-panel border border-line rounded-xl p-5; }
+  .btn-primary { @apply bg-brand-600 hover:bg-brand-500 text-ink px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer disabled:opacity-50; }
+  .btn-secondary { @apply bg-line hover:bg-edge text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 cursor-pointer border border-edge; }
+  .table-row { @apply border-b border-line hover:bg-inset/50 transition-colors; }
   .table-th { @apply text-xs text-slate-400 uppercase tracking-wider px-4 py-3 text-left font-medium; }
   .table-td { @apply px-4 py-3 text-sm text-slate-300; }
-  .input-field { @apply bg-[#111b35] border border-[#1e2d52] rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full; }
+  .input-field { @apply bg-inset border border-edge rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 w-full; }
+}
+
+/* Keep scrolling inside tables and charts, rather than widening the workspace. */
+.app-shell { height: 100vh; height: 100dvh; }
+.app-content { overscroll-behavior: contain; scrollbar-gutter: stable; }
+.app-content :where(.grid > *, .flex > *) { min-width: 0; }
+.app-content :where(h1, h2, h3, p, .font-mono) { overflow-wrap: anywhere; }
+.app-content svg:not(.recharts-surface) { flex-shrink: 0; }
+.app-content .recharts-responsive-container { min-width: 0; }
+.app-content .overflow-x-auto { max-width: 100%; overscroll-behavior-x: contain; }
+.app-content .overflow-x-auto table { min-width: 640px; }
+.app-content .overflow-x-auto:focus-visible { outline: 2px solid #c2ee8d; outline-offset: -2px; }
+.app-content .table-th { white-space: nowrap; }
+.app-content .table-td { min-width: 90px; }
+.app-mobile-header, .app-sidebar-backdrop { display: none; }
+.app-sidebar { min-height: 0; }
+.app-sidebar > div { flex-shrink: 0; }
+.app-sidebar button { min-width: 36px; min-height: 36px; }
+@media (max-width: 1023px) {
+  .app-shell { flex-direction: column; }
+  .app-mobile-header { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; min-height: 60px; padding: 8px 16px; padding-top: max(8px, env(safe-area-inset-top)); border-bottom: 1px solid var(--color-line); background: var(--color-shell); }
+  .app-mobile-header button { display: grid; place-items: center; width: 44px; height: 44px; }
+  .app-sidebar { display: none; position: fixed; inset: 0 auto 0 0; z-index: 50; width: min(288px, calc(100vw - 48px)); height: 100vh; height: 100dvh; padding-bottom: env(safe-area-inset-bottom); }
+  .app-sidebar.is-mobile-open { display: flex; }
+  .app-sidebar-backdrop { display: block; position: fixed; inset: 0; z-index: 40; background: #0009; backdrop-filter: blur(3px); }
+  .app-content { min-height: 0; padding-bottom: env(safe-area-inset-bottom); }
+}
+@media (max-width: 639px) {
+  .app-content .grid { column-gap: 12px; }
+  .app-content .table-td, .app-content .table-th { padding: 12px; }
+  .app-content :where(.btn-primary, .btn-secondary, input, select) { min-height: 44px; }
+  .app-content :where(input, select, textarea), #login-email, #login-password { font-size: 16px; }
+  .app-content .flex.items-center.justify-between { flex-wrap: wrap; gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell *, .app-shell *::before, .app-shell *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

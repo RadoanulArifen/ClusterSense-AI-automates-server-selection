@@ -9,10 +9,10 @@ export function AuthProvider({ children }) {
   });
   const [loading, setLoading] = useState(false);
 
-  const login = async (email, password) => {
+  const authenticate = async (request) => {
     setLoading(true);
     try {
-      const res = await authAPI.login(email, password);
+      const res = await request();
       const { access_token, user: u } = res.data;
       localStorage.setItem('token', access_token);
       localStorage.setItem('user', JSON.stringify(u));
@@ -23,13 +23,16 @@ export function AuthProvider({ children }) {
     } finally { setLoading(false); }
   };
 
+  const login = (email, password) => authenticate(() => authAPI.login(email, password));
+  const demoLogin = () => authenticate(() => authAPI.demoLogin());
+
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setUser(null);
   };
 
-  return <AuthContext.Provider value={{ user, login, logout, loading }}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ user, login, demoLogin, logout, loading }}>{children}</AuthContext.Provider>;
 }
 
 export const useAuth = () => useContext(AuthContext);

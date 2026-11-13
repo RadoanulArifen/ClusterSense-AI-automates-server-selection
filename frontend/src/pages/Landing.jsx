@@ -1,220 +1,87 @@
-import { useNavigate } from 'react-router-dom';
-import { Zap, Brain, Shield, DollarSign, Activity, FlaskConical, MessageSquare, Play, Lock, ArrowRight, CheckCircle, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight, Activity, Brain, Check, ChevronRight, DollarSign, FlaskConical, Menu, MessageSquare, Play, Server, ShieldCheck, X, Zap } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import './Landing.css';
 
-const FEATURES = [
-  { icon: Brain,         title: 'Smart Scheduling AI',        desc: 'RandomForest model (92.6% accuracy) trained on 20,000 real job assignments. Scores every node, picks the best.',  color:'blue',   badge:'92.6% accuracy' },
-  { icon: Shield,        title: 'Predictive Failure Detection',desc: 'GradientBoosting (98.6%) trained on 25,000 real sensor records. Detects High/Medium/Low risk with full explainability.', color:'rose',   badge:'98.6% accuracy' },
-  { icon: DollarSign,    title: 'Cost Optimization',           desc: 'GradientBoosting (99.9%) trained on 20,000 rows. Recommends Keep Running, Sleep Mode, or Shutdown per node.',  color:'emerald',badge:'99.9% accuracy' },
-  { icon: MessageSquare, title: 'AI Assistant',                  desc: 'Google Gemini-powered assistant with full cluster context. Falls back to rule-based engine automatically.',         color:'violet', badge:'Gemini AI' },
-  { icon: Activity,      title: 'Live Dashboard',              desc: 'Cluster metrics auto-refresh every 3 seconds. Animated charts update immediately after every deployment.',          color:'cyan',   badge:'3s refresh' },
-  { icon: FlaskConical,  title: 'What-if Simulator',           desc: 'Predict CPU/RAM saturation, identify overloaded nodes, and plan capacity before deploying.',                      color:'amber',  badge:'Capacity Planning' },
+const features = [
+  { icon: Brain, title: 'Give every workload its best home.', label: 'SMART SCHEDULING', text: 'Compare node suitability and resource availability, then review the AI recommendation before you deploy.' },
+  { icon: ShieldCheck, title: 'See the signals. Stay ahead.', label: 'PREDICTIVE OPERATIONS', text: 'Explore failure risk and the factors behind it. Bring the nodes that need attention into focus.' },
+  { icon: DollarSign, title: 'Make room for more efficiency.', label: 'COST OPTIMIZATION', text: 'Identify underused capacity and review recommendations to keep running, sleep, or shut down.' },
+  { icon: Activity, title: 'One view. The whole cluster.', label: 'LIVE VISIBILITY', text: 'Follow utilization, health, power, and alerts in a dashboard that refreshes as your demo evolves.' },
+  { icon: FlaskConical, title: 'Try the next move before you make it.', label: 'WHAT-IF SIMULATION', text: 'Explore future deployments, compare plans, and understand capacity pressure before committing.' },
+  { icon: MessageSquare, title: 'Ask questions. Find context.', label: 'AI COPILOT', text: 'Explore your cluster with a conversational assistant, backed by a built-in fallback when Gemini is unavailable.' },
+];
+const previews = [
+  { id: 'overview', title: 'Cluster overview', text: 'From a cluster-wide view to individual node health, keep the details that matter in one place.' },
+  { id: 'scheduling', title: 'Smart scheduling', text: 'Compare available capacity and review recommended placement before approving a deployment.' },
+  { id: 'predictions', title: 'Predictive operations', text: 'Understand risk signals and focus your attention on the infrastructure that needs it.' },
 ];
 
-const WORKFLOW = [
-  { n:'01', t:'Order Arrives',    d:'Customer purchases hosting via HostNova portal' },
-  { n:'02', t:'Request Queued',   d:'Deployment request stored in PostgreSQL queue' },
-  { n:'03', t:'AI Scheduling',    d:'RandomForest scores all 20 nodes, picks the best' },
-  { n:'04', t:'Admin Deploys',    d:'One-click deployment with confidence score shown' },
-  { n:'05', t:'Dashboard Updates',d:'Live metrics reflect new resource usage instantly' },
-  { n:'06', t:'AI Monitoring',    d:'GradientBoosting watches all nodes for failure risk' },
-];
-
-const CM = {
-  blue:    'bg-blue-500/10 text-blue-400 border-blue-500/20',
-  rose:    'bg-rose-500/10 text-rose-400 border-rose-500/20',
-  emerald: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-  violet:  'bg-violet-500/10 text-violet-400 border-violet-500/20',
-  cyan:    'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-  amber:   'bg-amber-500/10 text-amber-400 border-amber-500/20',
-};
+function Brand() {
+  return <span className="lp-brand"><span className="lp-brand-icon"><Zap size={20} fill="currentColor" /></span>ClusterSense<span className="lp-ai">AI</span></span>;
+}
 
 export default function Landing() {
-  const navigate = useNavigate();
+  const { user } = useAuth();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [selected, setSelected] = useState(0);
+  const demoPath = user ? '/app/dashboard' : '/login';
+  const preview = previews[selected];
+  const DemoLink = ({ className = '' }) => <Link to={demoPath} className={`lp-button ${className}`}><Play size={15} fill="currentColor" />Live Demo<ArrowUpRight size={17} /></Link>;
+
   return (
-    <div className="min-h-screen bg-[#020408] text-white overflow-x-hidden">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#020408]/80 backdrop-blur-xl border-b border-[#162040]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center"><Zap size={16} className="text-white"/></div>
-            <span className="font-bold">ClusterSense <span className="text-blue-400">AI</span></span>
-          </div>
-          <div className="flex items-center gap-3">
-            <button onClick={()=>navigate('/order')} className="text-slate-400 hover:text-white text-sm px-4 py-2">Demo Portal</button>
-            <button onClick={()=>navigate('/login')} className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
-              <Lock size={14}/> Admin Login
-            </button>
-          </div>
+    <div className="landing-page" id="top">
+      <a className="lp-skip" href="#main">Skip to content</a>
+      <header className="lp-header">
+        <div className="lp-container lp-nav">
+          <Link to="/" aria-label="ClusterSense AI home"><Brand /></Link>
+          <nav aria-label="Main navigation" className={`lp-links ${menuOpen ? 'is-open' : ''}`}>
+            {[['Features', '#features'], ['Platform preview', '#platform'], ['Why ClusterSense', '#benefits']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
+          </nav>
+          <div className="lp-nav-actions"><Link className="lp-signin" to={demoPath}>{user ? 'Dashboard' : 'Sign in'}<ArrowRight size={14} /></Link><DemoLink /><button className="lp-menu" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button></div>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none"/>
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-8 text-sm text-blue-300">
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"/>
-            Trained on 65,000 real infrastructure records — 3 real CSV datasets
+      <main id="main">
+        <section className="lp-hero lp-container">
+          <div className="lp-hero-copy">
+            <span className="lp-eyebrow"><span className="lp-dot" />INTELLIGENCE FOR YOUR INFRASTRUCTURE</span>
+            <h1>Less guesswork.<br />More <span>cluster sense.</span></h1>
+            <p>Your infrastructure has a lot to tell you. Turn its signals into smarter deployments, clearer decisions, and better use of every server.</p>
+            <div className="lp-hero-actions"><DemoLink /><a className="lp-text-link" href="#platform">Explore the platform <ArrowRight size={17} /></a></div>
+            <div className="lp-hero-note"><ShieldCheck size={15} /> Administrator-led. AI-assisted. Always in control.</div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="text-white">AI-Powered</span><br/>
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent">Infrastructure</span><br/>
-            <span className="text-white">Management</span>
-          </h1>
-          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-            ClusterSense AI automates server selection, predicts failures, and optimises costs for HostNova Cloud — powered by 3 real ML models trained on production infrastructure data.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={()=>navigate('/order')} className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:scale-105 transition-all">
-              <Play size={18}/> Try Demo Portal
-            </button>
-            <button onClick={()=>navigate('/login')} className="bg-[#0d1428] border border-[#162040] hover:border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:scale-105 transition-all">
-              Admin Dashboard <ArrowRight size={18}/>
-            </button>
+          <div className="lp-hero-visual">
+            <div className="lp-orbit" aria-hidden="true" />
+            <div className="lp-visual-label"><span className="lp-dot" /> YOUR CLUSTER. CONNECTED.</div>
+            <div className="lp-browser"><div className="lp-browser-bar"><span /><span /><span /><span className="lp-browser-title">ClusterSense AI / Overview</span><ShieldCheck size={12} /></div><img src="/previews/overview.svg" width="1200" height="750" alt="Illustrative ClusterSense dashboard showing server health, utilization trends, and node status" fetchPriority="high" /></div>
+            <div className="lp-insight"><span className="lp-insight-icon"><Brain size={22} /></span><div><strong>A little intelligence. A bigger picture.</strong><span>Scheduling, risk, and costs — connected.</span></div><Check size={16} /></div>
+            <p className="lp-preview-note">Illustrative interface · Demo data</p>
           </div>
-          <div className="mt-12 grid grid-cols-3 gap-4 max-w-md mx-auto">
-            {[['65k','Training Rows'],['3','Real Datasets'],['98.6%','Max Accuracy']].map(([v,l])=>(
-              <div key={l} className="bg-[#0d1428] border border-[#162040] rounded-xl p-4">
-                <div className="text-2xl font-black text-blue-400">{v}</div>
-                <div className="text-xs text-slate-400 mt-1">{l}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Datasets callout */}
-      <section className="py-12 px-6 bg-[#0a0f1e] border-y border-[#162040]">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-6">
-            <div className="text-sm text-emerald-400 font-medium uppercase tracking-wider mb-2">Real Data — Not Synthetic</div>
-            <h2 className="text-2xl font-bold text-white">3 Production Infrastructure Datasets</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              { file:'failure_prediction.csv', rows:'25,000', model:'GradientBoosting', acc:'98.6%', target:'Low / Medium / High risk', color:'rose',
-                cols:'node_id · cpu_usage_percent · ram_usage_percent · disk_usage_percent · network_usage_percent · active_jobs · idle_time_minutes · power_consumption_watts · temperature_celsius' },
-              { file:'smart_scheduling.csv', rows:'20,000', model:'RandomForest', acc:'92.6%', target:'Node suitability score', color:'blue',
-                cols:'job_type · cpu_required · memory_required_gb · estimated_runtime_minutes · priority · current_node_load · available_cpu_cores · available_memory_gb' },
-              { file:'cost_optimization.csv', rows:'20,000', model:'GradientBoosting', acc:'99.9%', target:'Keep Running / Sleep Mode / Shutdown', color:'emerald',
-                cols:'cpu_usage_percent · ram_usage_percent · active_jobs · idle_time_minutes · power_consumption_watts · utilization_score · monthly_cost_usd' },
-            ].map(({file,rows,model,acc,target,color,cols})=>(
-              <div key={file} className={`bg-[#0d1428] border border-${color}-500/20 rounded-xl p-5`}>
-                <div className={`text-xs font-bold text-${color}-400 mb-2`}>{file}</div>
-                <div className="text-white font-semibold mb-1">{rows} rows</div>
-                <div className="text-xs text-slate-400 mb-3">{model} · <span className={`text-${color}-400 font-bold`}>{acc}</span></div>
-                <div className="text-xs text-slate-500 mb-2">Target: <span className="text-slate-300">{target}</span></div>
-                <div className="text-xs text-slate-600 font-mono leading-relaxed">{cols}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <div className="lp-capabilities"><div className="lp-container"><span>ONE CONNECTED WORKSPACE</span>{[[Server, 'Infrastructure'], [Brain, 'Intelligence'], [ShieldCheck, 'Resilience'], [DollarSign, 'Efficiency']].map(([Icon, text]) => <div key={text}><Icon size={19} />{text}</div>)}</div></div>
 
-      {/* Workflow */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="text-sm text-blue-400 font-medium uppercase tracking-wider mb-3">Core Workflow</div>
-            <h2 className="text-3xl font-bold text-white">End-to-End AI Infrastructure Management</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {WORKFLOW.map(({n,t,d},i)=>(
-              <div key={n} className="relative bg-[#0d1428] border border-[#162040] rounded-xl p-5">
-                <div className="text-4xl font-black text-blue-600/20 mb-2">{n}</div>
-                <h3 className="font-semibold text-white mb-1">{t}</h3>
-                <p className="text-xs text-slate-400">{d}</p>
-                {i<WORKFLOW.length-1&&<ChevronRight size={16} className="absolute -right-3 top-1/2 -translate-y-1/2 text-blue-500/50 hidden md:block"/>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section className="lp-section lp-container" id="features">
+          <div className="lp-section-heading"><div><span className="lp-eyebrow">BUILT FOR THE BIGGER PICTURE</span><h2>Complex infrastructure.<br /><span>Clear next steps.</span></h2></div><p>From the first deployment to the next capacity decision, bring your operations into one intelligent workspace.</p></div>
+          <div className="lp-feature-grid">{features.map(({ icon: Icon, title, label, text }, i) => <article className="lp-feature" key={label}><div className="lp-feature-top"><span className="lp-feature-icon"><Icon size={22} /></span><span>0{i + 1}</span></div><span className="lp-feature-label">{label}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+        </section>
 
-      {/* Features */}
-      <section className="py-20 px-6 bg-[#0a0f1e]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Platform Features</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {FEATURES.map(({icon:Icon,title,desc,color,badge})=>(
-              <div key={title} className="bg-[#0d1428] border border-[#162040] rounded-xl p-5 hover:border-blue-500/30 transition-all">
-                <div className="flex items-start justify-between mb-3">
-                  <div className={`p-2 rounded-lg border ${CM[color]}`}><Icon size={20}/></div>
-                  <span className={`text-xs px-2 py-0.5 rounded-full border ${CM[color]}`}>{badge}</span>
-                </div>
-                <h3 className="font-semibold text-white mb-2">{title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section className="lp-platform" id="platform"><div className="lp-container lp-section">
+          <div className="lp-centered-heading"><span className="lp-eyebrow">A CLOSER LOOK</span><h2>Meet your new <span>control center.</span></h2><p>Less jumping between tools. More understanding what happens next.</p></div>
+          <div className="lp-tabs" role="tablist" aria-label="Platform previews">{previews.map((item, i) => <button key={item.id} id={`tab-${item.id}`} role="tab" aria-selected={selected === i} aria-controls="platform-panel" tabIndex={selected === i ? 0 : -1} onClick={() => setSelected(i)} onKeyDown={event => { if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) { event.preventDefault(); const next = event.key === 'Home' ? 0 : event.key === 'End' ? 2 : (i + (event.key === 'ArrowRight' ? 1 : 2)) % 3; setSelected(next); document.getElementById(`tab-${previews[next].id}`)?.focus(); } }}>{item.title}</button>)}</div>
+          <figure id="platform-panel" role="tabpanel" aria-labelledby={`tab-${preview.id}`} className="lp-screenshot"><div className="lp-screenshot-top"><span><span className="lp-dot" />{preview.title}</span><span>PLATFORM PREVIEW</span></div><img src={`/previews/${preview.id}.svg`} width="1200" height="750" alt={`${preview.title} interface illustration with sample infrastructure metrics`} loading="lazy" /><figcaption><span>{preview.text}</span><span>Illustrative interface · Demo data</span></figcaption></figure>
+        </div></section>
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Try ClusterSense AI Now</h2>
-          <p className="text-slate-400 mb-8">Submit a deployment request through the demo portal and watch the full AI workflow in action.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={()=>navigate('/order')} className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:scale-105 transition-all shadow-lg shadow-blue-500/25">
-              <Play size={18}/> Launch Demo
-            </button>
-            <button onClick={()=>navigate('/login')} className="bg-[#0d1428] border border-[#162040] hover:border-blue-500/40 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3">
-              <Lock size={18}/> Admin Login
-            </button>
-          </div>
-          <p className="text-slate-600 text-xs mt-5">Sign in with the administrator account configured during setup</p>
-        </div>
-      </section>
+        <section className="lp-section lp-container lp-benefits" id="benefits">
+          <div><span className="lp-eyebrow">THE HUMAN SIDE OF SMARTER OPERATIONS</span><h2>More clarity.<br />Less firefighting.<br /><span>Room to move forward.</span></h2><p>Good infrastructure decisions start with context. ClusterSense brings the signals and recommendations together, while you make the call.</p><a href="#get-started" className="lp-text-link">See it for yourself <ArrowRight size={17} /></a></div>
+          <div className="lp-benefit-list">{[['01', 'Deploy with confidence', 'Review resource fit and AI recommendations before approving a deployment.'], ['02', 'Put your attention where it matters', 'Bring node health and emerging risk into the same conversation.'], ['03', 'Make capacity go further', 'Explore utilization, compare future scenarios, and find opportunities to reduce waste.']].map(([n, title, text]) => <article key={n}><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div><ChevronRight size={18} /></article>)}</div>
+        </section>
 
-      <footer className="border-t border-[#162040] bg-[#070b16] px-6 pt-12 pb-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center"><Zap size={16} className="text-white"/></div>
-                <span className="font-bold text-white">HostNova <span className="text-blue-400">Cloud</span></span>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-400">Reliable cloud hosting with intelligent infrastructure management built in.</p>
-              <div className="mt-4 inline-flex items-center gap-2 text-xs text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"/> All systems operational
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-3">Hosting Platform</h3>
-              <div className="space-y-2 text-sm text-slate-400">
-                <div>Managed cloud hosting</div>
-                <div>AI-powered scheduling</div>
-                <div>Predictive monitoring</div>
-                <div>Cost optimization</div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-3">Get Started</h3>
-              <div className="flex flex-col items-start gap-2 text-sm">
-                <button onClick={()=>navigate('/order')} className="text-slate-400 hover:text-blue-400 transition-colors">Deploy a workload</button>
-                <button onClick={()=>navigate('/login')} className="text-slate-400 hover:text-blue-400 transition-colors">Infrastructure console</button>
-                <span className="text-slate-400">24/7 infrastructure monitoring</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-3">Built for Operations</h3>
-              <p className="text-sm leading-relaxed text-slate-400">3 ML models analyze scheduling, failure risk, and cost efficiency across your cluster.</p>
-              <p className="mt-3 text-xs text-slate-500">65,000 infrastructure records powering smarter hosting decisions.</p>
-            </div>
-          </div>
-
-          <div className="mt-10 pt-5 border-t border-[#162040] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-            <span>© 2026 HostNova Cloud. AI-powered infrastructure management.</span>
-            <span>ClusterSense AI · Secure deployment workflow</span>
-          </div>
-        </div>
-      </footer>
+        <section className="lp-container lp-cta-wrap" id="get-started"><div className="lp-cta"><span className="lp-eyebrow"><span className="lp-dot" /> YOUR NEXT SMARTER MOVE</span><h2>Get a feel for<br />infrastructure intelligence.</h2><p>Explore the ClusterSense AI software and its demo workflows.</p><DemoLink /><span className="lp-cta-note">Administrator sign-in required · Simulated infrastructure</span></div></section>
+      </main>
+      <footer className="lp-container lp-footer"><div><Link to="/" aria-label="ClusterSense AI home"><Brand /></Link><p>Clarity for every cluster.</p></div><div className="lp-footer-links"><a href="#features">Features</a><a href="#platform">Platform preview</a><Link to={demoPath}>Open software <ArrowUpRight size={13} /></Link></div><div className="lp-footer-bottom"><span>© {new Date().getFullYear()} ClusterSense AI</span><span>Built for HostNova Cloud · Infrastructure management demo</span></div></footer>
     </div>
   );
 }
